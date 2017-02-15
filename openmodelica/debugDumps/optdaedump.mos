@@ -639,6 +639,117 @@ buildModel(testOptdaedump); getErrorString();
 // ========================================
 //
 //
+// pre-optimization module wrapFunctionCalls (simulation):
+//
+//
+// unknown partition
+// ========================================
+//
+// Variables (13)
+// ========================================
+// 1: v2:VARIABLE()  type: Real 
+// 2: v1:VARIABLE()  type: Real 
+// 3: v0:VARIABLE()  type: Real 
+// 4: iC:VARIABLE()  type: Real 
+// 5: iL:STATE(1)()  type: Real 
+// 6: i2:VARIABLE()  type: Real 
+// 7: i1:VARIABLE()  type: Real 
+// 8: i0:VARIABLE()  type: Real 
+// 9: uC:STATE(1)()  type: Real 
+// 10: uL:VARIABLE()  type: Real 
+// 11: u2:VARIABLE()  type: Real 
+// 12: u1:VARIABLE()  type: Real 
+// 13: u0:VARIABLE()  type: Real 
+//
+//
+// Equations (13, 13)
+// ========================================
+// 1/1 (1): u0 = v1 - v0   [dynamic]
+// 2/2 (1): u1 = R1 * i1   [dynamic]
+// 3/3 (1): u1 = v1 - v2   [dynamic]
+// 4/4 (1): u2 = R2 * i2   [dynamic]
+// 5/5 (1): u2 = v2 - v0   [dynamic]
+// 6/6 (1): uL = L * der(iL)   [dynamic]
+// 7/7 (1): uL = u2   [dynamic]
+// 8/8 (1): iC = C * der(uC)   [dynamic]
+// 9/9 (1): uC = u0   [dynamic]
+// 10/10 (1): v0 = 0.0   [dynamic]
+// 11/11 (1): i0 = i1 + iC   [dynamic]
+// 12/12 (1): i1 = i2 + iL   [dynamic]
+// 13/13 (1): u0 = cos(time)   [unknown]
+//
+//
+// Simple Equations (0, 0)
+// ========================================
+//
+//
+// State Sets
+// ========================================
+//
+//
+// no matching
+//
+//
+//
+// BackendDAEType: simulation
+//
+//
+// Known variables only depending on parameters and constants - globalKnownVars (4)
+// ========================================
+// 1: C:PARAM()  = 3.0  type: Real 
+// 2: L:PARAM()  = 0.5  type: Real 
+// 3: R2:PARAM()  = 2.0  type: Real 
+// 4: R1:PARAM()  = 1.0  type: Real 
+//
+//
+// Known variables only depending on states and inputs - localKnownVars (0)
+// ========================================
+//
+//
+// External Objects (0)
+// ========================================
+//
+//
+// Classes of External Objects (0)
+// ========================================
+//
+//
+// Alias Variables (0)
+// ========================================
+//
+//
+// Simple Shared Equations (0, 0)
+// ========================================
+//
+//
+// Initial Equations (0, 0)
+// ========================================
+//
+//
+// Zero Crossings (0)
+// ========================================
+//
+//
+// Relations (0)
+// ========================================
+//
+//
+// Time Events (0)
+// ========================================
+//
+//
+// Constraints (0)
+// ========================================
+//
+//
+// Base partitions (0)
+// ========================================
+//
+//
+// Sub partitions (0)
+// ========================================
+//
+//
 // pre-optimization module clockPartitioning (simulation):
 //
 //
@@ -664,19 +775,19 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (13, 13)
 // ========================================
-// 1/1 (1): u0 = cos(time)   [dynamic]
-// 2/2 (1): u0 = v1 - v0   [dynamic]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): u1 = v1 - v2   [dynamic]
-// 5/5 (1): u2 = R2 * i2   [dynamic]
-// 6/6 (1): u2 = v2 - v0   [dynamic]
-// 7/7 (1): uL = L * der(iL)   [dynamic]
-// 8/8 (1): uL = u2   [dynamic]
-// 9/9 (1): iC = C * der(uC)   [dynamic]
-// 10/10 (1): uC = u0   [dynamic]
-// 11/11 (1): v0 = 0.0   [dynamic]
-// 12/12 (1): i0 = i1 + iC   [dynamic]
-// 13/13 (1): i1 = i2 + iL   [dynamic]
+// 1/1 (1): u0 = v1 - v0   [dynamic]
+// 2/2 (1): u1 = R1 * i1   [dynamic]
+// 3/3 (1): u1 = v1 - v2   [dynamic]
+// 4/4 (1): u2 = R2 * i2   [dynamic]
+// 5/5 (1): u2 = v2 - v0   [dynamic]
+// 6/6 (1): uL = L * der(iL)   [dynamic]
+// 7/7 (1): uL = u2   [dynamic]
+// 8/8 (1): iC = C * der(uC)   [dynamic]
+// 9/9 (1): uC = u0   [dynamic]
+// 10/10 (1): v0 = 0.0   [dynamic]
+// 11/11 (1): i0 = i1 + iC   [dynamic]
+// 12/12 (1): i1 = i2 + iL   [dynamic]
+// 13/13 (1): u0 = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -775,19 +886,19 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (13, 13)
 // ========================================
-// 1/1 (1): u0 = cos(time)   [dynamic]
-// 2/2 (1): u0 = v1 - v0   [dynamic]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): u1 = v1 - v2   [dynamic]
-// 5/5 (1): u2 = R2 * i2   [dynamic]
-// 6/6 (1): u2 = v2 - v0   [dynamic]
-// 7/7 (1): uL = L * der(iL)   [dynamic]
-// 8/8 (1): uL = u2   [dynamic]
-// 9/9 (1): iC = C * der(uC)   [dynamic]
-// 10/10 (1): uC = u0   [dynamic]
-// 11/11 (1): v0 = 0.0   [dynamic]
-// 12/12 (1): i0 = i1 + iC   [dynamic]
-// 13/13 (1): i1 = i2 + iL   [dynamic]
+// 1/1 (1): u0 = v1 - v0   [dynamic]
+// 2/2 (1): u1 = R1 * i1   [dynamic]
+// 3/3 (1): u1 = v1 - v2   [dynamic]
+// 4/4 (1): u2 = R2 * i2   [dynamic]
+// 5/5 (1): u2 = v2 - v0   [dynamic]
+// 6/6 (1): uL = L * der(iL)   [dynamic]
+// 7/7 (1): uL = u2   [dynamic]
+// 8/8 (1): iC = C * der(uC)   [dynamic]
+// 9/9 (1): uC = u0   [dynamic]
+// 10/10 (1): v0 = 0.0   [dynamic]
+// 11/11 (1): i0 = i1 + iC   [dynamic]
+// 12/12 (1): i1 = i2 + iL   [dynamic]
+// 13/13 (1): u0 = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -886,19 +997,19 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (13, 13)
 // ========================================
-// 1/1 (1): u0 = cos(time)   [dynamic]
-// 2/2 (1): u0 = v1 - v0   [dynamic]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): u1 = v1 - v2   [dynamic]
-// 5/5 (1): u2 = R2 * i2   [dynamic]
-// 6/6 (1): u2 = v2 - v0   [dynamic]
-// 7/7 (1): uL = L * der(iL)   [dynamic]
-// 8/8 (1): uL = u2   [dynamic]
-// 9/9 (1): iC = C * der(uC)   [dynamic]
-// 10/10 (1): uC = u0   [dynamic]
-// 11/11 (1): v0 = 0.0   [dynamic]
-// 12/12 (1): i0 = i1 + iC   [dynamic]
-// 13/13 (1): i1 = i2 + iL   [dynamic]
+// 1/1 (1): u0 = v1 - v0   [dynamic]
+// 2/2 (1): u1 = R1 * i1   [dynamic]
+// 3/3 (1): u1 = v1 - v2   [dynamic]
+// 4/4 (1): u2 = R2 * i2   [dynamic]
+// 5/5 (1): u2 = v2 - v0   [dynamic]
+// 6/6 (1): uL = L * der(iL)   [dynamic]
+// 7/7 (1): uL = u2   [dynamic]
+// 8/8 (1): iC = C * der(uC)   [dynamic]
+// 9/9 (1): uC = u0   [dynamic]
+// 10/10 (1): v0 = 0.0   [dynamic]
+// 11/11 (1): i0 = i1 + iC   [dynamic]
+// 12/12 (1): i1 = i2 + iL   [dynamic]
+// 13/13 (1): u0 = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -997,19 +1108,19 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (13, 13)
 // ========================================
-// 1/1 (1): u0 = cos(time)   [dynamic]
-// 2/2 (1): u0 = v1 - v0   [dynamic]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): u1 = v1 - v2   [dynamic]
-// 5/5 (1): u2 = R2 * i2   [dynamic]
-// 6/6 (1): u2 = v2 - v0   [dynamic]
-// 7/7 (1): uL = L * der(iL)   [dynamic]
-// 8/8 (1): uL = u2   [dynamic]
-// 9/9 (1): iC = C * der(uC)   [dynamic]
-// 10/10 (1): uC = u0   [dynamic]
-// 11/11 (1): v0 = 0.0   [dynamic]
-// 12/12 (1): i0 = i1 + iC   [dynamic]
-// 13/13 (1): i1 = i2 + iL   [dynamic]
+// 1/1 (1): u0 = v1 - v0   [dynamic]
+// 2/2 (1): u1 = R1 * i1   [dynamic]
+// 3/3 (1): u1 = v1 - v2   [dynamic]
+// 4/4 (1): u2 = R2 * i2   [dynamic]
+// 5/5 (1): u2 = v2 - v0   [dynamic]
+// 6/6 (1): uL = L * der(iL)   [dynamic]
+// 7/7 (1): uL = u2   [dynamic]
+// 8/8 (1): iC = C * der(uC)   [dynamic]
+// 9/9 (1): uC = u0   [dynamic]
+// 10/10 (1): v0 = 0.0   [dynamic]
+// 11/11 (1): i0 = i1 + iC   [dynamic]
+// 12/12 (1): i1 = i2 + iL   [dynamic]
+// 13/13 (1): u0 = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -1103,14 +1214,14 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (8, 8)
 // ========================================
-// 1/1 (1): uC = cos(time)   [dynamic]
-// 2/2 (1): u1 = R1 * i1   [dynamic]
-// 3/3 (1): u1 = uC - uL   [dynamic]
-// 4/4 (1): uL = R2 * i2   [dynamic]
-// 5/5 (1): uL = L * der(iL)   [dynamic]
-// 6/6 (1): iC = C * der(uC)   [dynamic]
-// 7/7 (1): i0 = i1 + iC   [dynamic]
-// 8/8 (1): i1 = i2 + iL   [dynamic]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * der(uC)   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -1209,14 +1320,14 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (8, 8)
 // ========================================
-// 1/1 (1): uC = cos(time)   [dynamic]
-// 2/2 (1): u1 = R1 * i1   [dynamic]
-// 3/3 (1): u1 = uC - uL   [dynamic]
-// 4/4 (1): uL = R2 * i2   [dynamic]
-// 5/5 (1): uL = L * der(iL)   [dynamic]
-// 6/6 (1): iC = C * der(uC)   [dynamic]
-// 7/7 (1): i0 = i1 + iC   [dynamic]
-// 8/8 (1): i1 = i2 + iL   [dynamic]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * der(uC)   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -1315,14 +1426,14 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (8, 8)
 // ========================================
-// 1/1 (1): uC = cos(time)   [dynamic]
-// 2/2 (1): u1 = R1 * i1   [dynamic]
-// 3/3 (1): u1 = uC - uL   [dynamic]
-// 4/4 (1): uL = R2 * i2   [dynamic]
-// 5/5 (1): uL = L * der(iL)   [dynamic]
-// 6/6 (1): iC = C * der(uC)   [dynamic]
-// 7/7 (1): i0 = i1 + iC   [dynamic]
-// 8/8 (1): i1 = i2 + iL   [dynamic]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * der(uC)   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -1421,14 +1532,14 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (8, 8)
 // ========================================
-// 1/1 (1): uC = cos(time)   [dynamic]
-// 2/2 (1): u1 = R1 * i1   [dynamic]
-// 3/3 (1): u1 = uC - uL   [dynamic]
-// 4/4 (1): uL = R2 * i2   [dynamic]
-// 5/5 (1): uL = L * der(iL)   [dynamic]
-// 6/6 (1): iC = C * der(uC)   [dynamic]
-// 7/7 (1): i0 = i1 + iC   [dynamic]
-// 8/8 (1): i1 = i2 + iL   [dynamic]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * der(uC)   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -1527,14 +1638,14 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (8, 8)
 // ========================================
-// 1/1 (1): uC = cos(time)   [dynamic]
-// 2/2 (1): u1 = R1 * i1   [dynamic]
-// 3/3 (1): u1 = uC - uL   [dynamic]
-// 4/4 (1): uL = R2 * i2   [dynamic]
-// 5/5 (1): uL = L * der(iL)   [dynamic]
-// 6/6 (1): iC = C * der(uC)   [dynamic]
-// 7/7 (1): i0 = i1 + iC   [dynamic]
-// 8/8 (1): i1 = i2 + iL   [dynamic]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * der(uC)   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -1634,14 +1745,14 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (8, 8)
 // ========================================
-// 1/1 (1): der(uC) = -sin(time)   [dynamic]
-// 2/2 (1): u1 = R1 * i1   [dynamic]
-// 3/3 (1): u1 = uC - uL   [dynamic]
-// 4/4 (1): uL = R2 * i2   [dynamic]
-// 5/5 (1): uL = L * der(iL)   [dynamic]
-// 6/6 (1): iC = C * der(uC)   [dynamic]
-// 7/7 (1): i0 = i1 + iC   [dynamic]
-// 8/8 (1): i1 = i2 + iL   [dynamic]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * der(uC)   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): der(uC) = -sin(time)   [unknown]
 //
 //
 // Index reduction done.
@@ -1669,15 +1780,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (9, 9)
 // ========================================
-// 1/1 (1): $DER.uC = -sin(time)   [dynamic]
-// 2/2 (1): u1 = R1 * i1   [dynamic]
-// 3/3 (1): u1 = uC - uL   [dynamic]
-// 4/4 (1): uL = R2 * i2   [dynamic]
-// 5/5 (1): uL = L * der(iL)   [dynamic]
-// 6/6 (1): iC = C * $DER.uC   [dynamic]
-// 7/7 (1): i0 = i1 + iC   [dynamic]
-// 8/8 (1): i1 = i2 + iL   [dynamic]
-// 9/9 (1): uC = cos(time)   [dynamic]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -1691,25 +1802,25 @@ buildModel(testOptdaedump); getErrorString();
 // Matching
 // ========================================
 // 9 variables and equations
-// var 1 is solved in eqn 6
-// var 2 is solved in eqn 5
-// var 3 is solved in eqn 8
-// var 4 is solved in eqn 2
-// var 5 is solved in eqn 7
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
 // var 6 is solved in eqn 9
-// var 7 is solved in eqn 4
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 1
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
 // {9:6}
-// {2, 8, 4, 3:8, 7, 3, 4} Size: 4 Jacobian Linear
-// {5:2}
-// {1:9}
-// {6:1}
-// {7:5}
+// {8:9}
+// {5:1}
+// {1, 2, 3, 7:4, 3, 7, 8} Size: 4 Jacobian Linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -1801,15 +1912,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (10, 10)
 // ========================================
-// 1/1 (1): uC = cos(time)   [dynamic]
-// 2/2 (1): i1 = i2 + iL   [dynamic]
-// 3/3 (1): i0 = i1 + iC   [dynamic]
-// 4/4 (1): iC = C * $DER.uC   [dynamic]
-// 5/5 (1): uL = L * $DER.iL   [dynamic]
-// 6/6 (1): uL = R2 * i2   [dynamic]
-// 7/7 (1): u1 = uC - uL   [dynamic]
-// 8/8 (1): u1 = R1 * i1   [dynamic]
-// 9/9 (1): $DER.uC = -sin(time)   [dynamic]
+// 1/1 (1): uC = cos(time)   [unknown]
+// 2/2 (1): $DER.uC = -sin(time)   [unknown]
+// 3/3 (1): i1 = i2 + iL   [dynamic]
+// 4/4 (1): i0 = i1 + iC   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): uL = L * $DER.iL   [dynamic]
+// 7/7 (1): uL = R2 * i2   [dynamic]
+// 8/8 (1): u1 = uC - uL   [dynamic]
+// 9/9 (1): u1 = R1 * i1   [dynamic]
 // 10/10 (1): v0 = 0.0   [initial]
 //
 //
@@ -1930,15 +2041,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [dynamic]
-// 2/2 (1): i1 = i2 + iL   [dynamic]
-// 3/3 (1): i0 = i1 + iC   [dynamic]
-// 4/4 (1): iC = C * $DER.uC   [dynamic]
-// 5/5 (1): uL = L * $DER.iL   [dynamic]
-// 6/6 (1): uL = R2 * i2   [dynamic]
-// 7/7 (1): u1 = uC - uL   [dynamic]
-// 8/8 (1): u1 = R1 * i1   [dynamic]
-// 9/9 (1): $DER.uC = -sin(time)   [dynamic]
+// 1/1 (1): uC = cos(time)   [unknown]
+// 2/2 (1): $DER.uC = -sin(time)   [unknown]
+// 3/3 (1): i1 = i2 + iL   [dynamic]
+// 4/4 (1): i0 = i1 + iC   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): uL = L * $DER.iL   [dynamic]
+// 7/7 (1): uL = R2 * i2   [dynamic]
+// 8/8 (1): u1 = uC - uL   [dynamic]
+// 9/9 (1): u1 = R1 * i1   [dynamic]
 //
 //
 // Simple Equations (0, 0)
@@ -2066,15 +2177,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (10, 10)
 // ========================================
-// 1/1 (1): uC = cos(time)   [dynamic]
-// 2/2 (1): i1 = i2 + iL   [dynamic]
-// 3/3 (1): i0 = i1 + iC   [dynamic]
-// 4/4 (1): iC = C * $DER.uC   [dynamic]
-// 5/5 (1): uL = L * $DER.iL   [dynamic]
-// 6/6 (1): uL = R2 * i2   [dynamic]
-// 7/7 (1): u1 = uC - uL   [dynamic]
-// 8/8 (1): u1 = R1 * i1   [dynamic]
-// 9/9 (1): $DER.uC = -sin(time)   [dynamic]
+// 1/1 (1): uC = cos(time)   [unknown]
+// 2/2 (1): $DER.uC = -sin(time)   [unknown]
+// 3/3 (1): i1 = i2 + iL   [dynamic]
+// 4/4 (1): i0 = i1 + iC   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): uL = L * $DER.iL   [dynamic]
+// 7/7 (1): uL = R2 * i2   [dynamic]
+// 8/8 (1): u1 = uC - uL   [dynamic]
+// 9/9 (1): u1 = R1 * i1   [dynamic]
 // 10/10 (1): iL = $_start(iL)   [initial]
 //
 //
@@ -2089,27 +2200,27 @@ buildModel(testOptdaedump); getErrorString();
 // Matching
 // ========================================
 // 10 variables and equations
-// var 1 is solved in eqn 4
-// var 2 is solved in eqn 5
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 6
 // var 3 is solved in eqn 10
-// var 4 is solved in eqn 6
-// var 5 is solved in eqn 2
-// var 6 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 3
+// var 6 is solved in eqn 4
 // var 7 is solved in eqn 1
-// var 8 is solved in eqn 7
-// var 9 is solved in eqn 8
-// var 10 is solved in eqn 9
+// var 8 is solved in eqn 8
+// var 9 is solved in eqn 9
+// var 10 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
 // {10:3}
-// {9:10}
-// {4:1}
+// {2:10}
+// {5:1}
 // {1:7}
-// {7, 6, 2, 8:9, 5, 4, 8} Size: 4 Jacobian Linear
-// {5:2}
-// {3:6}
+// {8, 7, 3, 9:9, 5, 4, 8} Size: 4 Jacobian Linear
+// {6:2}
+// {4:6}
 //
 //
 //
@@ -2226,15 +2337,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (10, 10)
 // ========================================
-// 1/1 (1): uC = cos(time)   [dynamic]
-// 2/2 (1): i1 = i2 + iL   [dynamic]
-// 3/3 (1): i0 = i1 + iC   [dynamic]
-// 4/4 (1): iC = C * $DER.uC   [dynamic]
-// 5/5 (1): uL = L * $DER.iL   [dynamic]
-// 6/6 (1): uL = R2 * i2   [dynamic]
-// 7/7 (1): u1 = uC - uL   [dynamic]
-// 8/8 (1): u1 = R1 * i1   [dynamic]
-// 9/9 (1): $DER.uC = -sin(time)   [dynamic]
+// 1/1 (1): uC = cos(time)   [unknown]
+// 2/2 (1): $DER.uC = -sin(time)   [unknown]
+// 3/3 (1): i1 = i2 + iL   [dynamic]
+// 4/4 (1): i0 = i1 + iC   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): uL = L * $DER.iL   [dynamic]
+// 7/7 (1): uL = R2 * i2   [dynamic]
+// 8/8 (1): u1 = uC - uL   [dynamic]
+// 9/9 (1): u1 = R1 * i1   [dynamic]
 // 10/10 (1): iL = $_start(iL)   [initial]
 //
 //
@@ -2249,28 +2360,28 @@ buildModel(testOptdaedump); getErrorString();
 // Matching
 // ========================================
 // 10 variables and equations
-// var 1 is solved in eqn 4
-// var 2 is solved in eqn 5
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 6
 // var 3 is solved in eqn 10
-// var 4 is solved in eqn 6
-// var 5 is solved in eqn 2
-// var 6 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 3
+// var 6 is solved in eqn 4
 // var 7 is solved in eqn 1
-// var 8 is solved in eqn 7
-// var 9 is solved in eqn 8
-// var 10 is solved in eqn 9
+// var 8 is solved in eqn 8
+// var 9 is solved in eqn 9
+// var 10 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
 // {10:3}
-// {9:10}
-// {4:1}
+// {2:10}
+// {5:1}
 // {1:7}
-// {{{7:9}, {6:4}, {8:5}}
-// ,{2:8}} Size: 1 linear
-// {5:2}
-// {3:6}
+// {{{8:9}, {7:4}, {9:5}}
+// ,{3:8}} Size: 1 linear
+// {6:2}
+// {4:6}
 //
 //
 //
@@ -3569,15 +3680,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (10, 10)
 // ========================================
-// 1/1 (1): uC = cos(time)   [dynamic]
-// 2/2 (1): i1 = i2 + iL   [dynamic]
-// 3/3 (1): i0 = i1 + iC   [dynamic]
-// 4/4 (1): iC = C * $DER.uC   [dynamic]
-// 5/5 (1): uL = L * $DER.iL   [dynamic]
-// 6/6 (1): uL = R2 * i2   [dynamic]
-// 7/7 (1): u1 = uC - uL   [dynamic]
-// 8/8 (1): u1 = R1 * i1   [dynamic]
-// 9/9 (1): $DER.uC = -sin(time)   [dynamic]
+// 1/1 (1): uC = cos(time)   [unknown]
+// 2/2 (1): $DER.uC = -sin(time)   [unknown]
+// 3/3 (1): i1 = i2 + iL   [dynamic]
+// 4/4 (1): i0 = i1 + iC   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): uL = L * $DER.iL   [dynamic]
+// 7/7 (1): uL = R2 * i2   [dynamic]
+// 8/8 (1): u1 = uC - uL   [dynamic]
+// 9/9 (1): u1 = R1 * i1   [dynamic]
 // 10/10 (1): iL = $_start(iL)   [initial]
 //
 //
@@ -3592,28 +3703,28 @@ buildModel(testOptdaedump); getErrorString();
 // Matching
 // ========================================
 // 10 variables and equations
-// var 1 is solved in eqn 4
-// var 2 is solved in eqn 5
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 6
 // var 3 is solved in eqn 10
-// var 4 is solved in eqn 6
-// var 5 is solved in eqn 2
-// var 6 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 3
+// var 6 is solved in eqn 4
 // var 7 is solved in eqn 1
-// var 8 is solved in eqn 7
-// var 9 is solved in eqn 8
-// var 10 is solved in eqn 9
+// var 8 is solved in eqn 8
+// var 9 is solved in eqn 9
+// var 10 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
 // {10:3}
-// {9:10}
-// {4:1}
+// {2:10}
+// {5:1}
 // {1:7}
-// {{{7:9}, {6:4}, {8:5}}
-// ,{2:8}} Size: 1 linear
-// {5:2}
-// {3:6}
+// {{{8:9}, {7:4}, {9:5}}
+// ,{3:8}} Size: 1 linear
+// {6:2}
+// {4:6}
 //
 //
 //
@@ -3730,15 +3841,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (10, 10)
 // ========================================
-// 1/1 (1): uC = cos(time)   [dynamic]
-// 2/2 (1): i1 = i2 + iL   [dynamic]
-// 3/3 (1): i0 = i1 + iC   [dynamic]
-// 4/4 (1): iC = C * $DER.uC   [dynamic]
-// 5/5 (1): $DER.iL = uL / L   [dynamic]
-// 6/6 (1): uL = R2 * i2   [dynamic]
-// 7/7 (1): u1 = uC - uL   [dynamic]
-// 8/8 (1): u1 = R1 * i1   [dynamic]
-// 9/9 (1): $DER.uC = -sin(time)   [dynamic]
+// 1/1 (1): uC = cos(time)   [unknown]
+// 2/2 (1): $DER.uC = -sin(time)   [unknown]
+// 3/3 (1): i1 = i2 + iL   [dynamic]
+// 4/4 (1): i0 = i1 + iC   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): $DER.iL = uL / L   [dynamic]
+// 7/7 (1): uL = R2 * i2   [dynamic]
+// 8/8 (1): u1 = uC - uL   [dynamic]
+// 9/9 (1): u1 = R1 * i1   [dynamic]
 // 10/10 (1): iL = $_start(iL)   [initial]
 //
 //
@@ -3753,28 +3864,28 @@ buildModel(testOptdaedump); getErrorString();
 // Matching
 // ========================================
 // 10 variables and equations
-// var 1 is solved in eqn 4
-// var 2 is solved in eqn 5
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 6
 // var 3 is solved in eqn 10
-// var 4 is solved in eqn 6
-// var 5 is solved in eqn 2
-// var 6 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 3
+// var 6 is solved in eqn 4
 // var 7 is solved in eqn 1
-// var 8 is solved in eqn 7
-// var 9 is solved in eqn 8
-// var 10 is solved in eqn 9
+// var 8 is solved in eqn 8
+// var 9 is solved in eqn 9
+// var 10 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
 // {10:3}
-// {9:10}
-// {4:1}
+// {2:10}
+// {5:1}
 // {1:7}
-// {{{7:9}, {6:4}, {8:5}}
-// ,{2:8}} Size: 1 linear
-// {5:2}
-// {3:6}
+// {{{8:9}, {7:4}, {9:5}}
+// ,{3:8}} Size: 1 linear
+// {6:2}
+// {4:6}
 //
 //
 //
@@ -3891,15 +4002,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (10, 10)
 // ========================================
-// 1/1 (1): uC = cos(time)   [dynamic]
-// 2/2 (1): i1 = i2 + iL   [dynamic]
-// 3/3 (1): i0 = i1 + iC   [dynamic]
-// 4/4 (1): iC = C * $DER.uC   [dynamic]
-// 5/5 (1): $DER.iL = uL / L   [dynamic]
-// 6/6 (1): uL = R2 * i2   [dynamic]
-// 7/7 (1): u1 = uC - uL   [dynamic]
-// 8/8 (1): u1 = R1 * i1   [dynamic]
-// 9/9 (1): $DER.uC = -sin(time)   [dynamic]
+// 1/1 (1): uC = cos(time)   [unknown]
+// 2/2 (1): $DER.uC = -sin(time)   [unknown]
+// 3/3 (1): i1 = i2 + iL   [dynamic]
+// 4/4 (1): i0 = i1 + iC   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): $DER.iL = uL / L   [dynamic]
+// 7/7 (1): uL = R2 * i2   [dynamic]
+// 8/8 (1): u1 = uC - uL   [dynamic]
+// 9/9 (1): u1 = R1 * i1   [dynamic]
 // 10/10 (1): iL = $_start(iL)   [initial]
 //
 //
@@ -3914,28 +4025,28 @@ buildModel(testOptdaedump); getErrorString();
 // Matching
 // ========================================
 // 10 variables and equations
-// var 1 is solved in eqn 4
-// var 2 is solved in eqn 5
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 6
 // var 3 is solved in eqn 10
-// var 4 is solved in eqn 6
-// var 5 is solved in eqn 2
-// var 6 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 3
+// var 6 is solved in eqn 4
 // var 7 is solved in eqn 1
-// var 8 is solved in eqn 7
-// var 9 is solved in eqn 8
-// var 10 is solved in eqn 9
+// var 8 is solved in eqn 8
+// var 9 is solved in eqn 9
+// var 10 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
 // {10:3}
-// {9:10}
-// {4:1}
+// {2:10}
+// {5:1}
 // {1:7}
-// {{{7:9}, {6:4}, {8:5}}
-// ,{2:8}} Size: 1 linear
-// {5:2}
-// {3:6}
+// {{{8:9}, {7:4}, {9:5}}
+// ,{3:8}} Size: 1 linear
+// {6:2}
+// {4:6}
 //
 //
 //
@@ -4020,15 +4131,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Equations (9, 9)
 // ========================================
-// 1/1 (1): $DER.uC = -sin(time)   [dynamic]
-// 2/2 (1): u1 = R1 * i1   [dynamic]
-// 3/3 (1): u1 = uC - uL   [dynamic]
-// 4/4 (1): uL = R2 * i2   [dynamic]
-// 5/5 (1): uL = L * der(iL)   [dynamic]
-// 6/6 (1): iC = C * $DER.uC   [dynamic]
-// 7/7 (1): i0 = i1 + iC   [dynamic]
-// 8/8 (1): i1 = i2 + iL   [dynamic]
-// 9/9 (1): uC = cos(time)   [dynamic]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -4042,158 +4153,25 @@ buildModel(testOptdaedump); getErrorString();
 // Matching
 // ========================================
 // 9 variables and equations
-// var 1 is solved in eqn 6
-// var 2 is solved in eqn 5
-// var 3 is solved in eqn 8
-// var 4 is solved in eqn 2
-// var 5 is solved in eqn 7
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
 // var 6 is solved in eqn 9
-// var 7 is solved in eqn 4
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 1
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
 // {9:6}
-// {2, 8, 4, 3:8, 7, 3, 4} Size: 4 Jacobian Linear
-// {5:2}
-// {1:9}
-// {6:1}
-// {7:5}
-//
-//
-//
-// BackendDAEType: simulation
-//
-//
-// Known variables only depending on parameters and constants - globalKnownVars (5)
-// ========================================
-// 1: v0:VARIABLE()  = 0.0  type: Real 
-// 2: R1:PARAM()  = 1.0  type: Real 
-// 3: R2:PARAM()  = 2.0  type: Real 
-// 4: L:PARAM()  = 0.5  type: Real 
-// 5: C:PARAM()  = 3.0  type: Real 
-//
-//
-// Known variables only depending on states and inputs - localKnownVars (0)
-// ========================================
-//
-//
-// External Objects (0)
-// ========================================
-//
-//
-// Classes of External Objects (0)
-// ========================================
-//
-//
-// Alias Variables (4)
-// ========================================
-// 1: u0:VARIABLE()  = uC  type: Real 
-// 2: u2:VARIABLE()  = uL  type: Real 
-// 3: v1:VARIABLE()  = uC  type: Real 
-// 4: v2:VARIABLE()  = uL  type: Real 
-//
-//
-// Simple Shared Equations (0, 0)
-// ========================================
-//
-//
-// Initial Equations (0, 0)
-// ========================================
-//
-//
-// Zero Crossings (0)
-// ========================================
-//
-//
-// Relations (0)
-// ========================================
-//
-//
-// Time Events (0)
-// ========================================
-//
-//
-// Constraints (0)
-// ========================================
-//
-//
-// Base partitions (0)
-// ========================================
-//
-//
-// Sub partitions (0)
-// ========================================
-//
-//
-// post-optimization module wrapFunctionCalls (simulation):
-//
-//
-// unspecified partition
-// ========================================
-//
-// Variables (10)
-// ========================================
-// 1: iC:VARIABLE()  type: Real 
-// 2: iL:STATE(1)()  type: Real 
-// 3: i2:VARIABLE()  type: Real 
-// 4: i1:VARIABLE()  type: Real 
-// 5: i0:VARIABLE()  type: Real 
-// 6: uC:DUMMY_STATE()  type: Real 
-// 7: uL:VARIABLE()  type: Real 
-// 8: u1:VARIABLE()  type: Real 
-// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
-// 10: $cse1:VARIABLE()  type: Real  unreplaceable
-//
-//
-// Equations (10, 10)
-// ========================================
-// 1/1 (1): $DER.uC = -$cse1   [dynamic]
-// 2/2 (1): u1 = R1 * i1   [dynamic]
-// 3/3 (1): u1 = uC - uL   [dynamic]
-// 4/4 (1): uL = R2 * i2   [dynamic]
-// 5/5 (1): uL = L * der(iL)   [dynamic]
-// 6/6 (1): iC = C * $DER.uC   [dynamic]
-// 7/7 (1): i0 = i1 + iC   [dynamic]
-// 8/8 (1): i1 = i2 + iL   [dynamic]
-// 9/9 (1): $cse1 = sin(time)   [unknown]
-// 10/10 (1): uC = cos(time)   [unknown]
-//
-//
-// Simple Equations (0, 0)
-// ========================================
-//
-//
-// State Sets
-// ========================================
-//
-//
-// Matching
-// ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 6
-// var 2 is solved in eqn 5
-// var 3 is solved in eqn 8
-// var 4 is solved in eqn 2
-// var 5 is solved in eqn 7
-// var 6 is solved in eqn 10
-// var 7 is solved in eqn 4
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 1
-// var 10 is solved in eqn 9
-//
-//
-// StrongComponents
-// ========================================
-// {10:6}
-// {9:10}
-// {2, 8, 4, 3:8, 7, 3, 4} Size: 4 Jacobian Linear
-// {5:2}
-// {1:9}
-// {6:1}
-// {7:5}
+// {8:9}
+// {5:1}
+// {1, 2, 3, 7:4, 3, 7, 8} Size: 4 Jacobian Linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -4267,7 +4245,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -4278,21 +4256,19 @@ buildModel(testOptdaedump); getErrorString();
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
 // 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
-// 10: $cse1:VARIABLE()  type: Real  unreplaceable
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): $DER.uC = -$cse1   [dynamic]
-// 2/2 (1): u1 = R1 * i1   [dynamic]
-// 3/3 (1): u1 = uC - uL   [dynamic]
-// 4/4 (1): uL = R2 * i2   [dynamic]
-// 5/5 (1): uL = L * der(iL)   [dynamic]
-// 6/6 (1): iC = C * $DER.uC   [dynamic]
-// 7/7 (1): i0 = i1 + iC   [dynamic]
-// 8/8 (1): i1 = i2 + iL   [dynamic]
-// 9/9 (1): $cse1 = sin(time)   [unknown]
-// 10/10 (1): uC = cos(time)   [unknown]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -4305,28 +4281,26 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 6
-// var 2 is solved in eqn 5
-// var 3 is solved in eqn 8
-// var 4 is solved in eqn 2
-// var 5 is solved in eqn 7
-// var 6 is solved in eqn 10
-// var 7 is solved in eqn 4
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 1
-// var 10 is solved in eqn 9
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {10:6}
-// {9:10}
-// {2, 8, 4, 3:8, 7, 3, 4} Size: 4 Jacobian Linear
-// {5:2}
-// {1:9}
-// {6:1}
-// {7:5}
+// {9:6}
+// {8:9}
+// {5:1}
+// {1, 2, 3, 7:4, 3, 7, 8} Size: 4 Jacobian Linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -4400,7 +4374,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -4411,21 +4385,19 @@ buildModel(testOptdaedump); getErrorString();
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
 // 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
-// 10: $cse1:VARIABLE()  type: Real  unreplaceable
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): $DER.uC = -$cse1   [dynamic]
-// 2/2 (1): u1 = R1 * i1   [dynamic]
-// 3/3 (1): u1 = uC - uL   [dynamic]
-// 4/4 (1): uL = R2 * i2   [dynamic]
-// 5/5 (1): uL = L * der(iL)   [dynamic]
-// 6/6 (1): iC = C * $DER.uC   [dynamic]
-// 7/7 (1): i0 = i1 + iC   [dynamic]
-// 8/8 (1): i1 = i2 + iL   [dynamic]
-// 9/9 (1): $cse1 = sin(time)   [unknown]
-// 10/10 (1): uC = cos(time)   [unknown]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -4438,28 +4410,26 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 6
-// var 2 is solved in eqn 5
-// var 3 is solved in eqn 8
-// var 4 is solved in eqn 2
-// var 5 is solved in eqn 7
-// var 6 is solved in eqn 10
-// var 7 is solved in eqn 4
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 1
-// var 10 is solved in eqn 9
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {10:6}
-// {9:10}
-// {2, 8, 4, 3:8, 7, 3, 4} Size: 4 Jacobian Linear
-// {5:2}
-// {1:9}
-// {6:1}
-// {7:5}
+// {9:6}
+// {8:9}
+// {5:1}
+// {1, 2, 3, 7:4, 3, 7, 8} Size: 4 Jacobian Linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -4533,7 +4503,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -4544,21 +4514,19 @@ buildModel(testOptdaedump); getErrorString();
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
 // 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
-// 10: $cse1:VARIABLE()  type: Real  unreplaceable
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): $DER.uC = -$cse1   [dynamic]
-// 2/2 (1): u1 = R1 * i1   [dynamic]
-// 3/3 (1): u1 = uC - uL   [dynamic]
-// 4/4 (1): uL = R2 * i2   [dynamic]
-// 5/5 (1): uL = L * der(iL)   [dynamic]
-// 6/6 (1): iC = C * $DER.uC   [dynamic]
-// 7/7 (1): i0 = i1 + iC   [dynamic]
-// 8/8 (1): i1 = i2 + iL   [dynamic]
-// 9/9 (1): $cse1 = sin(time)   [unknown]
-// 10/10 (1): uC = cos(time)   [unknown]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -4571,28 +4539,26 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 6
-// var 2 is solved in eqn 5
-// var 3 is solved in eqn 8
-// var 4 is solved in eqn 2
-// var 5 is solved in eqn 7
-// var 6 is solved in eqn 10
-// var 7 is solved in eqn 4
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 1
-// var 10 is solved in eqn 9
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {10:6}
-// {9:10}
-// {2, 8, 4, 3:8, 7, 3, 4} Size: 4 Jacobian Linear
-// {5:2}
-// {1:9}
-// {6:1}
-// {7:5}
+// {9:6}
+// {8:9}
+// {5:1}
+// {1, 2, 3, 7:4, 3, 7, 8} Size: 4 Jacobian Linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -4666,7 +4632,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -4676,22 +4642,20 @@ buildModel(testOptdaedump); getErrorString();
 // 6: uC:DUMMY_STATE()  type: Real 
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
-// 9: $cse1:VARIABLE()  type: Real  unreplaceable
-// 10: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
+// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [unknown]
-// 2/2 (1): $cse1 = sin(time)   [unknown]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): i1 = i2 + iL   [dynamic]
-// 5/5 (1): uL = R2 * i2   [dynamic]
-// 6/6 (1): u1 = uC - uL   [dynamic]
-// 7/7 (1): uL = L * der(iL)   [dynamic]
-// 8/8 (1): iC = (-C) * $cse1   [dynamic]
-// 9/9 (1): i0 = i1 + iC   [dynamic]
-// 10/10 (1): $DER.uC = -$cse1   [binding]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -4704,28 +4668,26 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 8
-// var 2 is solved in eqn 7
-// var 3 is solved in eqn 5
-// var 4 is solved in eqn 4
-// var 5 is solved in eqn 9
-// var 6 is solved in eqn 1
-// var 7 is solved in eqn 6
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 2
-// var 10 is solved in eqn 10
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {2:9}
-// {8:1}
-// {10:10}
-// {1:6}
-// {6, 5, 4, 3:8, 4, 3, 7} Size: 4 Jacobian Linear
-// {9:5}
-// {7:2}
+// {9:6}
+// {8:9}
+// {5:1}
+// {1, 2, 3, 7:4, 3, 7, 8} Size: 4 Jacobian Linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -4799,7 +4761,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -4809,22 +4771,20 @@ buildModel(testOptdaedump); getErrorString();
 // 6: uC:DUMMY_STATE()  type: Real 
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
-// 9: $cse1:VARIABLE()  type: Real  unreplaceable
-// 10: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
+// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [unknown]
-// 2/2 (1): $cse1 = sin(time)   [unknown]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): i1 = i2 + iL   [dynamic]
-// 5/5 (1): uL = R2 * i2   [dynamic]
-// 6/6 (1): u1 = uC - uL   [dynamic]
-// 7/7 (1): uL = L * der(iL)   [dynamic]
-// 8/8 (1): iC = (-C) * $cse1   [dynamic]
-// 9/9 (1): i0 = i1 + iC   [dynamic]
-// 10/10 (1): $DER.uC = -$cse1   [binding]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): uL = L * der(iL)   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -4837,28 +4797,26 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 8
-// var 2 is solved in eqn 7
-// var 3 is solved in eqn 5
-// var 4 is solved in eqn 4
-// var 5 is solved in eqn 9
-// var 6 is solved in eqn 1
-// var 7 is solved in eqn 6
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 2
-// var 10 is solved in eqn 10
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {2:9}
-// {8:1}
-// {10:10}
-// {1:6}
-// {6, 5, 4, 3:8, 4, 3, 7} Size: 4 Jacobian Linear
-// {9:5}
-// {7:2}
+// {9:6}
+// {8:9}
+// {5:1}
+// {1, 2, 3, 7:4, 3, 7, 8} Size: 4 Jacobian Linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -4932,7 +4890,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -4942,22 +4900,20 @@ buildModel(testOptdaedump); getErrorString();
 // 6: uC:DUMMY_STATE()  type: Real 
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
-// 9: $cse1:VARIABLE()  type: Real  unreplaceable
-// 10: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
+// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [unknown]
-// 2/2 (1): $cse1 = sin(time)   [unknown]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): i1 = i2 + iL   [dynamic]
-// 5/5 (1): uL = R2 * i2   [dynamic]
-// 6/6 (1): u1 = uC - uL   [dynamic]
-// 7/7 (1): der(iL) = uL / L   [dynamic]
-// 8/8 (1): iC = (-C) * $cse1   [dynamic]
-// 9/9 (1): i0 = i1 + iC   [dynamic]
-// 10/10 (1): $DER.uC = -$cse1   [binding]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): der(iL) = uL / L   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -4970,28 +4926,26 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 8
-// var 2 is solved in eqn 7
-// var 3 is solved in eqn 5
-// var 4 is solved in eqn 4
-// var 5 is solved in eqn 9
-// var 6 is solved in eqn 1
-// var 7 is solved in eqn 6
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 2
-// var 10 is solved in eqn 10
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {2:9}
-// {8:1}
-// {10:10}
-// {1:6}
-// {6, 5, 4, 3:8, 4, 3, 7} Size: 4 Jacobian Linear
-// {9:5}
-// {7:2}
+// {9:6}
+// {8:9}
+// {5:1}
+// {1, 2, 3, 7:4, 3, 7, 8} Size: 4 Jacobian Linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -5065,7 +5019,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -5075,22 +5029,20 @@ buildModel(testOptdaedump); getErrorString();
 // 6: uC:DUMMY_STATE()  type: Real 
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
-// 9: $cse1:VARIABLE()  type: Real  unreplaceable
-// 10: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
+// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [unknown]
-// 2/2 (1): $cse1 = sin(time)   [unknown]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): i1 = i2 + iL   [dynamic]
-// 5/5 (1): uL = R2 * i2   [dynamic]
-// 6/6 (1): u1 = uC - uL   [dynamic]
-// 7/7 (1): der(iL) = uL / L   [dynamic]
-// 8/8 (1): iC = (-C) * $cse1   [dynamic]
-// 9/9 (1): i0 = i1 + iC   [dynamic]
-// 10/10 (1): $DER.uC = -$cse1   [binding]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): der(iL) = uL / L   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -5103,29 +5055,27 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 8
-// var 2 is solved in eqn 7
-// var 3 is solved in eqn 5
-// var 4 is solved in eqn 4
-// var 5 is solved in eqn 9
-// var 6 is solved in eqn 1
-// var 7 is solved in eqn 6
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 2
-// var 10 is solved in eqn 10
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {2:9}
-// {8:1}
-// {10:10}
-// {1:6}
-// {{{6:8}, {5:3}, {3:4}}
-// ,{4:7}} Size: 1 linear
-// {9:5}
-// {7:2}
+// {9:6}
+// {8:9}
+// {5:1}
+// {{{1:4}, {2:7}, {7:3}}
+// ,{3:8}} Size: 1 linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -5199,7 +5149,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -5209,22 +5159,20 @@ buildModel(testOptdaedump); getErrorString();
 // 6: uC:DUMMY_STATE()  type: Real 
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
-// 9: $cse1:VARIABLE()  type: Real  unreplaceable
-// 10: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
+// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [unknown]
-// 2/2 (1): $cse1 = sin(time)   [unknown]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): i1 = i2 + iL   [dynamic]
-// 5/5 (1): uL = R2 * i2   [dynamic]
-// 6/6 (1): u1 = uC - uL   [dynamic]
-// 7/7 (1): der(iL) = uL / L   [dynamic]
-// 8/8 (1): iC = (-C) * $cse1   [dynamic]
-// 9/9 (1): i0 = i1 + iC   [dynamic]
-// 10/10 (1): $DER.uC = -$cse1   [binding]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): der(iL) = uL / L   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -5237,29 +5185,27 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 8
-// var 2 is solved in eqn 7
-// var 3 is solved in eqn 5
-// var 4 is solved in eqn 4
-// var 5 is solved in eqn 9
-// var 6 is solved in eqn 1
-// var 7 is solved in eqn 6
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 2
-// var 10 is solved in eqn 10
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {2:9}
-// {8:1}
-// {10:10}
-// {1:6}
-// {{{6:8}, {5:3}, {3:4}}
-// ,{4:7}} Size: 1 linear
-// {9:5}
-// {7:2}
+// {9:6}
+// {8:9}
+// {5:1}
+// {{{1:4}, {2:7}, {7:3}}
+// ,{3:8}} Size: 1 linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -5335,18 +5281,18 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Variables (4)
 // ========================================
-// 1: i1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 3: u1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
+// 1: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
+// 2: uL.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
+// 3: i1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
 // 4: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
 //
 //
 // Equations (4, 4)
 // ========================================
-// 1/1 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = i2.$pDERLSJac1.dummyVarLSJac1 - i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 2/2 (1): u1.$pDERLSJac1.dummyVarLSJac1 = R1 * i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 3/3 (1): uLSeedLSJac1 = R2 * i2.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 4/4 (1): u1.$pDERLSJac1.dummyVarLSJac1 = -uLSeedLSJac1   [dynamic]
+// 1/1 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = R2 * i2.$pDERLSJac1.dummyVarLSJac1 - uL.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 2/2 (1): i1.$pDERLSJac1.dummyVarLSJac1 = i2.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 3/3 (1): u1SeedLSJac1 = -uL.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 4/4 (1): u1SeedLSJac1 = R1 * i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
 //
 //
 // Simple Equations (0, 0)
@@ -5382,15 +5328,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Known variables only depending on parameters and constants - globalKnownVars (9)
 // ========================================
-// 1: input i1:VARIABLE()  type: Real 
-// 2: input i2:VARIABLE()  type: Real 
-// 3: input u1:VARIABLE()  type: Real 
+// 1: input i2:VARIABLE()  type: Real 
+// 2: input uL:VARIABLE()  type: Real 
+// 3: input i1:VARIABLE()  type: Real 
 // 4: input $res[1]:VARIABLE()  type: Real 
 // 5: input R1:PARAM()  = 1.0  type: Real 
 // 6: input R2:PARAM()  = 2.0  type: Real 
 // 7: input uC:DUMMY_STATE()  type: Real 
 // 8: input iL:STATE(1)()  type: Real 
-// 9: input uLSeedLSJac1:STATE_DER()  type: Real 
+// 9: input u1SeedLSJac1:STATE_DER()  type: Real 
 //
 //
 // Known variables only depending on states and inputs - localKnownVars (0)
@@ -5447,18 +5393,16 @@ buildModel(testOptdaedump); getErrorString();
 // unknown partition
 // ========================================
 //
-// Variables (3)
+// Variables (2)
 // ========================================
 // 1: i1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 3: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
+// 2: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
 //
 //
-// Equations (3, 3)
+// Equations (2, 2)
 // ========================================
-// 1/1 (1): uLSeedLSJac1 = R2 * i2.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 2/2 (1): -uLSeedLSJac1 = R1 * i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 3/3 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = i2.$pDERLSJac1.dummyVarLSJac1 - i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 1/1 (1): u1SeedLSJac1 = R1 * i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 2/2 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = R2 * i1.$pDERLSJac1.dummyVarLSJac1 + u1SeedLSJac1   [dynamic]
 //
 //
 // Simple Equations (0, 0)
@@ -5478,15 +5422,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Known variables only depending on parameters and constants - globalKnownVars (9)
 // ========================================
-// 1: input uLSeedLSJac1:STATE_DER()  type: Real 
+// 1: input u1SeedLSJac1:STATE_DER()  type: Real 
 // 2: input iL:STATE(1)()  type: Real 
 // 3: input uC:DUMMY_STATE()  type: Real 
 // 4: input R2:PARAM()  = 2.0  type: Real 
 // 5: input R1:PARAM()  = 1.0  type: Real 
 // 6: input $res[1]:VARIABLE()  type: Real 
-// 7: input u1:VARIABLE()  type: Real 
-// 8: input i2:VARIABLE()  type: Real 
-// 9: input i1:VARIABLE()  type: Real 
+// 7: input i1:VARIABLE()  type: Real 
+// 8: input uL:VARIABLE()  type: Real 
+// 9: input i2:VARIABLE()  type: Real 
 //
 //
 // Known variables only depending on states and inputs - localKnownVars (0)
@@ -5501,9 +5445,10 @@ buildModel(testOptdaedump); getErrorString();
 // ========================================
 //
 //
-// Alias Variables (1)
+// Alias Variables (2)
 // ========================================
-// 1: u1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -uLSeedLSJac1  type: Real 
+// 1: uL.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -u1SeedLSJac1  type: Real 
+// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = i1.$pDERLSJac1.dummyVarLSJac1  type: Real 
 //
 //
 // Simple Shared Equations (0, 0)
@@ -5544,18 +5489,16 @@ buildModel(testOptdaedump); getErrorString();
 // unknown partition
 // ========================================
 //
-// Variables (3)
+// Variables (2)
 // ========================================
 // 1: i1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 3: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
+// 2: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
 //
 //
-// Equations (3, 3)
+// Equations (2, 2)
 // ========================================
-// 1/1 (1): uLSeedLSJac1 = R2 * i2.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 2/2 (1): -uLSeedLSJac1 = R1 * i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 3/3 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = i2.$pDERLSJac1.dummyVarLSJac1 - i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 1/1 (1): u1SeedLSJac1 = R1 * i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 2/2 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = R2 * i1.$pDERLSJac1.dummyVarLSJac1 + u1SeedLSJac1   [dynamic]
 //
 //
 // Simple Equations (0, 0)
@@ -5575,15 +5518,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Known variables only depending on parameters and constants - globalKnownVars (9)
 // ========================================
-// 1: input uLSeedLSJac1:STATE_DER()  type: Real 
+// 1: input u1SeedLSJac1:STATE_DER()  type: Real 
 // 2: input iL:STATE(1)()  type: Real 
 // 3: input uC:DUMMY_STATE()  type: Real 
 // 4: input R2:PARAM()  = 2.0  type: Real 
 // 5: input R1:PARAM()  = 1.0  type: Real 
 // 6: input $res[1]:VARIABLE()  type: Real 
-// 7: input u1:VARIABLE()  type: Real 
-// 8: input i2:VARIABLE()  type: Real 
-// 9: input i1:VARIABLE()  type: Real 
+// 7: input i1:VARIABLE()  type: Real 
+// 8: input uL:VARIABLE()  type: Real 
+// 9: input i2:VARIABLE()  type: Real 
 //
 //
 // Known variables only depending on states and inputs - localKnownVars (0)
@@ -5598,9 +5541,10 @@ buildModel(testOptdaedump); getErrorString();
 // ========================================
 //
 //
-// Alias Variables (1)
+// Alias Variables (2)
 // ========================================
-// 1: u1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -uLSeedLSJac1  type: Real 
+// 1: uL.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -u1SeedLSJac1  type: Real 
+// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = i1.$pDERLSJac1.dummyVarLSJac1  type: Real 
 //
 //
 // Simple Shared Equations (0, 0)
@@ -5642,18 +5586,16 @@ buildModel(testOptdaedump); getErrorString();
 // unknown partition
 // ========================================
 //
-// Variables (3)
+// Variables (2)
 // ========================================
 // 1: i1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 3: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
+// 2: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
 //
 //
-// Equations (3, 3)
+// Equations (2, 2)
 // ========================================
-// 1/1 (1): uLSeedLSJac1 = R2 * i2.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 2/2 (1): -uLSeedLSJac1 = R1 * i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 3/3 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = i2.$pDERLSJac1.dummyVarLSJac1 - i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 1/1 (1): u1SeedLSJac1 = R1 * i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 2/2 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = R2 * i1.$pDERLSJac1.dummyVarLSJac1 + u1SeedLSJac1   [dynamic]
 //
 //
 // Simple Equations (0, 0)
@@ -5666,17 +5608,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 3 variables and equations
-// var 1 is solved in eqn 2
-// var 2 is solved in eqn 1
-// var 3 is solved in eqn 3
+// 2 variables and equations
+// var 1 is solved in eqn 1
+// var 2 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
-// {2:1}
-// {1:2}
-// {3:3}
+// {1:1}
+// {2:2}
 //
 //
 //
@@ -5685,15 +5625,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Known variables only depending on parameters and constants - globalKnownVars (9)
 // ========================================
-// 1: input uLSeedLSJac1:STATE_DER()  type: Real 
+// 1: input u1SeedLSJac1:STATE_DER()  type: Real 
 // 2: input iL:STATE(1)()  type: Real 
 // 3: input uC:DUMMY_STATE()  type: Real 
 // 4: input R2:PARAM()  = 2.0  type: Real 
 // 5: input R1:PARAM()  = 1.0  type: Real 
 // 6: input $res[1]:VARIABLE()  type: Real 
-// 7: input u1:VARIABLE()  type: Real 
-// 8: input i2:VARIABLE()  type: Real 
-// 9: input i1:VARIABLE()  type: Real 
+// 7: input i1:VARIABLE()  type: Real 
+// 8: input uL:VARIABLE()  type: Real 
+// 9: input i2:VARIABLE()  type: Real 
 //
 //
 // Known variables only depending on states and inputs - localKnownVars (0)
@@ -5708,9 +5648,10 @@ buildModel(testOptdaedump); getErrorString();
 // ========================================
 //
 //
-// Alias Variables (1)
+// Alias Variables (2)
 // ========================================
-// 1: u1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -uLSeedLSJac1  type: Real 
+// 1: uL.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -u1SeedLSJac1  type: Real 
+// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = i1.$pDERLSJac1.dummyVarLSJac1  type: Real 
 //
 //
 // Simple Shared Equations (0, 0)
@@ -5751,18 +5692,16 @@ buildModel(testOptdaedump); getErrorString();
 // unknown partition
 // ========================================
 //
-// Variables (3)
+// Variables (2)
 // ========================================
 // 1: i1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 3: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
+// 2: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
 //
 //
-// Equations (3, 3)
+// Equations (2, 2)
 // ========================================
-// 1/1 (1): uLSeedLSJac1 = R2 * i2.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 2/2 (1): -uLSeedLSJac1 = R1 * i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 3/3 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = i2.$pDERLSJac1.dummyVarLSJac1 - i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 1/1 (1): u1SeedLSJac1 = R1 * i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 2/2 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = R2 * i1.$pDERLSJac1.dummyVarLSJac1 + u1SeedLSJac1   [dynamic]
 //
 //
 // Simple Equations (0, 0)
@@ -5775,17 +5714,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 3 variables and equations
-// var 1 is solved in eqn 2
-// var 2 is solved in eqn 1
-// var 3 is solved in eqn 3
+// 2 variables and equations
+// var 1 is solved in eqn 1
+// var 2 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
-// {2:1}
-// {1:2}
-// {3:3}
+// {1:1}
+// {2:2}
 //
 //
 //
@@ -5794,15 +5731,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Known variables only depending on parameters and constants - globalKnownVars (9)
 // ========================================
-// 1: input uLSeedLSJac1:STATE_DER()  type: Real 
+// 1: input u1SeedLSJac1:STATE_DER()  type: Real 
 // 2: input iL:STATE(1)()  type: Real 
 // 3: input uC:DUMMY_STATE()  type: Real 
 // 4: input R2:PARAM()  = 2.0  type: Real 
 // 5: input R1:PARAM()  = 1.0  type: Real 
 // 6: input $res[1]:VARIABLE()  type: Real 
-// 7: input u1:VARIABLE()  type: Real 
-// 8: input i2:VARIABLE()  type: Real 
-// 9: input i1:VARIABLE()  type: Real 
+// 7: input i1:VARIABLE()  type: Real 
+// 8: input uL:VARIABLE()  type: Real 
+// 9: input i2:VARIABLE()  type: Real 
 //
 //
 // Known variables only depending on states and inputs - localKnownVars (0)
@@ -5817,9 +5754,10 @@ buildModel(testOptdaedump); getErrorString();
 // ========================================
 //
 //
-// Alias Variables (1)
+// Alias Variables (2)
 // ========================================
-// 1: u1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -uLSeedLSJac1  type: Real 
+// 1: uL.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -u1SeedLSJac1  type: Real 
+// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = i1.$pDERLSJac1.dummyVarLSJac1  type: Real 
 //
 //
 // Simple Shared Equations (0, 0)
@@ -5860,18 +5798,16 @@ buildModel(testOptdaedump); getErrorString();
 // unknown partition
 // ========================================
 //
-// Variables (3)
+// Variables (2)
 // ========================================
 // 1: i1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 3: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
+// 2: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
 //
 //
-// Equations (3, 3)
+// Equations (2, 2)
 // ========================================
-// 1/1 (1): uLSeedLSJac1 = R2 * i2.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 2/2 (1): -uLSeedLSJac1 = R1 * i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
-// 3/3 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = i2.$pDERLSJac1.dummyVarLSJac1 - i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 1/1 (1): u1SeedLSJac1 = R1 * i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 2/2 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = R2 * i1.$pDERLSJac1.dummyVarLSJac1 + u1SeedLSJac1   [dynamic]
 //
 //
 // Simple Equations (0, 0)
@@ -5884,17 +5820,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 3 variables and equations
-// var 1 is solved in eqn 2
-// var 2 is solved in eqn 1
-// var 3 is solved in eqn 3
+// 2 variables and equations
+// var 1 is solved in eqn 1
+// var 2 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
-// {2:1}
-// {1:2}
-// {3:3}
+// {1:1}
+// {2:2}
 //
 //
 //
@@ -5903,15 +5837,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Known variables only depending on parameters and constants - globalKnownVars (9)
 // ========================================
-// 1: input uLSeedLSJac1:STATE_DER()  type: Real 
+// 1: input u1SeedLSJac1:STATE_DER()  type: Real 
 // 2: input iL:STATE(1)()  type: Real 
 // 3: input uC:DUMMY_STATE()  type: Real 
 // 4: input R2:PARAM()  = 2.0  type: Real 
 // 5: input R1:PARAM()  = 1.0  type: Real 
 // 6: input $res[1]:VARIABLE()  type: Real 
-// 7: input u1:VARIABLE()  type: Real 
-// 8: input i2:VARIABLE()  type: Real 
-// 9: input i1:VARIABLE()  type: Real 
+// 7: input i1:VARIABLE()  type: Real 
+// 8: input uL:VARIABLE()  type: Real 
+// 9: input i2:VARIABLE()  type: Real 
 //
 //
 // Known variables only depending on states and inputs - localKnownVars (0)
@@ -5926,9 +5860,10 @@ buildModel(testOptdaedump); getErrorString();
 // ========================================
 //
 //
-// Alias Variables (1)
+// Alias Variables (2)
 // ========================================
-// 1: u1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -uLSeedLSJac1  type: Real 
+// 1: uL.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -u1SeedLSJac1  type: Real 
+// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = i1.$pDERLSJac1.dummyVarLSJac1  type: Real 
 //
 //
 // Simple Shared Equations (0, 0)
@@ -5969,18 +5904,16 @@ buildModel(testOptdaedump); getErrorString();
 // unknown partition
 // ========================================
 //
-// Variables (3)
+// Variables (2)
 // ========================================
 // 1: i1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 3: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
+// 2: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
 //
 //
-// Equations (3, 3)
+// Equations (2, 2)
 // ========================================
-// 1/1 (1): i2.$pDERLSJac1.dummyVarLSJac1 = uLSeedLSJac1 / R2   [dynamic]
-// 2/2 (1): i1.$pDERLSJac1.dummyVarLSJac1 = (-uLSeedLSJac1) / R1   [dynamic]
-// 3/3 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = i2.$pDERLSJac1.dummyVarLSJac1 - i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 1/1 (1): i1.$pDERLSJac1.dummyVarLSJac1 = u1SeedLSJac1 / R1   [dynamic]
+// 2/2 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = R2 * i1.$pDERLSJac1.dummyVarLSJac1 + u1SeedLSJac1   [dynamic]
 //
 //
 // Simple Equations (0, 0)
@@ -5993,17 +5926,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 3 variables and equations
-// var 1 is solved in eqn 2
-// var 2 is solved in eqn 1
-// var 3 is solved in eqn 3
+// 2 variables and equations
+// var 1 is solved in eqn 1
+// var 2 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
-// {2:1}
-// {1:2}
-// {3:3}
+// {1:1}
+// {2:2}
 //
 //
 //
@@ -6012,15 +5943,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Known variables only depending on parameters and constants - globalKnownVars (9)
 // ========================================
-// 1: input uLSeedLSJac1:STATE_DER()  type: Real 
+// 1: input u1SeedLSJac1:STATE_DER()  type: Real 
 // 2: input iL:STATE(1)()  type: Real 
 // 3: input uC:DUMMY_STATE()  type: Real 
 // 4: input R2:PARAM()  = 2.0  type: Real 
 // 5: input R1:PARAM()  = 1.0  type: Real 
 // 6: input $res[1]:VARIABLE()  type: Real 
-// 7: input u1:VARIABLE()  type: Real 
-// 8: input i2:VARIABLE()  type: Real 
-// 9: input i1:VARIABLE()  type: Real 
+// 7: input i1:VARIABLE()  type: Real 
+// 8: input uL:VARIABLE()  type: Real 
+// 9: input i2:VARIABLE()  type: Real 
 //
 //
 // Known variables only depending on states and inputs - localKnownVars (0)
@@ -6035,9 +5966,10 @@ buildModel(testOptdaedump); getErrorString();
 // ========================================
 //
 //
-// Alias Variables (1)
+// Alias Variables (2)
 // ========================================
-// 1: u1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -uLSeedLSJac1  type: Real 
+// 1: uL.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -u1SeedLSJac1  type: Real 
+// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = i1.$pDERLSJac1.dummyVarLSJac1  type: Real 
 //
 //
 // Simple Shared Equations (0, 0)
@@ -6078,18 +6010,16 @@ buildModel(testOptdaedump); getErrorString();
 // unknown partition
 // ========================================
 //
-// Variables (3)
+// Variables (2)
 // ========================================
 // 1: i1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 3: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
+// 2: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
 //
 //
-// Equations (3, 3)
+// Equations (2, 2)
 // ========================================
-// 1/1 (1): i2.$pDERLSJac1.dummyVarLSJac1 = uLSeedLSJac1 / R2   [dynamic]
-// 2/2 (1): i1.$pDERLSJac1.dummyVarLSJac1 = (-uLSeedLSJac1) / R1   [dynamic]
-// 3/3 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = i2.$pDERLSJac1.dummyVarLSJac1 - i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 1/1 (1): i1.$pDERLSJac1.dummyVarLSJac1 = u1SeedLSJac1 / R1   [dynamic]
+// 2/2 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = R2 * i1.$pDERLSJac1.dummyVarLSJac1 + u1SeedLSJac1   [dynamic]
 //
 //
 // Simple Equations (0, 0)
@@ -6102,17 +6032,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 3 variables and equations
-// var 1 is solved in eqn 2
-// var 2 is solved in eqn 1
-// var 3 is solved in eqn 3
+// 2 variables and equations
+// var 1 is solved in eqn 1
+// var 2 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
-// {2:1}
-// {1:2}
-// {3:3}
+// {1:1}
+// {2:2}
 //
 //
 //
@@ -6121,15 +6049,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Known variables only depending on parameters and constants - globalKnownVars (9)
 // ========================================
-// 1: input uLSeedLSJac1:STATE_DER()  type: Real 
+// 1: input u1SeedLSJac1:STATE_DER()  type: Real 
 // 2: input iL:STATE(1)()  type: Real 
 // 3: input uC:DUMMY_STATE()  type: Real 
 // 4: input R2:PARAM()  = 2.0  type: Real 
 // 5: input R1:PARAM()  = 1.0  type: Real 
 // 6: input $res[1]:VARIABLE()  type: Real 
-// 7: input u1:VARIABLE()  type: Real 
-// 8: input i2:VARIABLE()  type: Real 
-// 9: input i1:VARIABLE()  type: Real 
+// 7: input i1:VARIABLE()  type: Real 
+// 8: input uL:VARIABLE()  type: Real 
+// 9: input i2:VARIABLE()  type: Real 
 //
 //
 // Known variables only depending on states and inputs - localKnownVars (0)
@@ -6144,9 +6072,10 @@ buildModel(testOptdaedump); getErrorString();
 // ========================================
 //
 //
-// Alias Variables (1)
+// Alias Variables (2)
 // ========================================
-// 1: u1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -uLSeedLSJac1  type: Real 
+// 1: uL.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -u1SeedLSJac1  type: Real 
+// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = i1.$pDERLSJac1.dummyVarLSJac1  type: Real 
 //
 //
 // Simple Shared Equations (0, 0)
@@ -6187,18 +6116,16 @@ buildModel(testOptdaedump); getErrorString();
 // unknown partition
 // ========================================
 //
-// Variables (3)
+// Variables (2)
 // ========================================
 // 1: i1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 3: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
+// 2: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
 //
 //
-// Equations (3, 3)
+// Equations (2, 2)
 // ========================================
-// 1/1 (1): i2.$pDERLSJac1.dummyVarLSJac1 = uLSeedLSJac1 / R2   [dynamic]
-// 2/2 (1): i1.$pDERLSJac1.dummyVarLSJac1 = (-uLSeedLSJac1) / R1   [dynamic]
-// 3/3 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = i2.$pDERLSJac1.dummyVarLSJac1 - i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 1/1 (1): i1.$pDERLSJac1.dummyVarLSJac1 = u1SeedLSJac1 / R1   [dynamic]
+// 2/2 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = R2 * i1.$pDERLSJac1.dummyVarLSJac1 + u1SeedLSJac1   [dynamic]
 //
 //
 // Simple Equations (0, 0)
@@ -6211,17 +6138,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 3 variables and equations
-// var 1 is solved in eqn 2
-// var 2 is solved in eqn 1
-// var 3 is solved in eqn 3
+// 2 variables and equations
+// var 1 is solved in eqn 1
+// var 2 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
-// {2:1}
-// {1:2}
-// {3:3}
+// {1:1}
+// {2:2}
 //
 //
 //
@@ -6230,15 +6155,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Known variables only depending on parameters and constants - globalKnownVars (9)
 // ========================================
-// 1: input uLSeedLSJac1:STATE_DER()  type: Real 
+// 1: input u1SeedLSJac1:STATE_DER()  type: Real 
 // 2: input iL:STATE(1)()  type: Real 
 // 3: input uC:DUMMY_STATE()  type: Real 
 // 4: input R2:PARAM()  = 2.0  type: Real 
 // 5: input R1:PARAM()  = 1.0  type: Real 
 // 6: input $res[1]:VARIABLE()  type: Real 
-// 7: input u1:VARIABLE()  type: Real 
-// 8: input i2:VARIABLE()  type: Real 
-// 9: input i1:VARIABLE()  type: Real 
+// 7: input i1:VARIABLE()  type: Real 
+// 8: input uL:VARIABLE()  type: Real 
+// 9: input i2:VARIABLE()  type: Real 
 //
 //
 // Known variables only depending on states and inputs - localKnownVars (0)
@@ -6253,9 +6178,10 @@ buildModel(testOptdaedump); getErrorString();
 // ========================================
 //
 //
-// Alias Variables (1)
+// Alias Variables (2)
 // ========================================
-// 1: u1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -uLSeedLSJac1  type: Real 
+// 1: uL.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -u1SeedLSJac1  type: Real 
+// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = i1.$pDERLSJac1.dummyVarLSJac1  type: Real 
 //
 //
 // Simple Shared Equations (0, 0)
@@ -6296,18 +6222,16 @@ buildModel(testOptdaedump); getErrorString();
 // unknown partition
 // ========================================
 //
-// Variables (3)
+// Variables (2)
 // ========================================
 // 1: i1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 3: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
+// 2: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
 //
 //
-// Equations (3, 3)
+// Equations (2, 2)
 // ========================================
-// 1/1 (1): i2.$pDERLSJac1.dummyVarLSJac1 = uLSeedLSJac1 / R2   [dynamic]
-// 2/2 (1): i1.$pDERLSJac1.dummyVarLSJac1 = (-uLSeedLSJac1) / R1   [dynamic]
-// 3/3 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = i2.$pDERLSJac1.dummyVarLSJac1 - i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 1/1 (1): i1.$pDERLSJac1.dummyVarLSJac1 = u1SeedLSJac1 / R1   [dynamic]
+// 2/2 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = R2 * i1.$pDERLSJac1.dummyVarLSJac1 + u1SeedLSJac1   [dynamic]
 //
 //
 // Simple Equations (0, 0)
@@ -6320,17 +6244,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 3 variables and equations
-// var 1 is solved in eqn 2
-// var 2 is solved in eqn 1
-// var 3 is solved in eqn 3
+// 2 variables and equations
+// var 1 is solved in eqn 1
+// var 2 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
-// {2:1}
-// {1:2}
-// {3:3}
+// {1:1}
+// {2:2}
 //
 //
 //
@@ -6339,15 +6261,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Known variables only depending on parameters and constants - globalKnownVars (9)
 // ========================================
-// 1: input uLSeedLSJac1:STATE_DER()  type: Real 
+// 1: input u1SeedLSJac1:STATE_DER()  type: Real 
 // 2: input iL:STATE(1)()  type: Real 
 // 3: input uC:DUMMY_STATE()  type: Real 
 // 4: input R2:PARAM()  = 2.0  type: Real 
 // 5: input R1:PARAM()  = 1.0  type: Real 
 // 6: input $res[1]:VARIABLE()  type: Real 
-// 7: input u1:VARIABLE()  type: Real 
-// 8: input i2:VARIABLE()  type: Real 
-// 9: input i1:VARIABLE()  type: Real 
+// 7: input i1:VARIABLE()  type: Real 
+// 8: input uL:VARIABLE()  type: Real 
+// 9: input i2:VARIABLE()  type: Real 
 //
 //
 // Known variables only depending on states and inputs - localKnownVars (0)
@@ -6362,9 +6284,10 @@ buildModel(testOptdaedump); getErrorString();
 // ========================================
 //
 //
-// Alias Variables (1)
+// Alias Variables (2)
 // ========================================
-// 1: u1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -uLSeedLSJac1  type: Real 
+// 1: uL.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -u1SeedLSJac1  type: Real 
+// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = i1.$pDERLSJac1.dummyVarLSJac1  type: Real 
 //
 //
 // Simple Shared Equations (0, 0)
@@ -6405,18 +6328,16 @@ buildModel(testOptdaedump); getErrorString();
 // unknown partition
 // ========================================
 //
-// Variables (3)
+// Variables (2)
 // ========================================
 // 1: i1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  type: Real 
-// 3: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
+// 2: $res.1.$pDERLSJac1.dummyVarLSJac1:STATE_DER()  type: Real  unreplaceable
 //
 //
-// Equations (3, 3)
+// Equations (2, 2)
 // ========================================
-// 1/1 (1): i2.$pDERLSJac1.dummyVarLSJac1 = uLSeedLSJac1 / R2   [dynamic]
-// 2/2 (1): i1.$pDERLSJac1.dummyVarLSJac1 = (-uLSeedLSJac1) / R1   [dynamic]
-// 3/3 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = i2.$pDERLSJac1.dummyVarLSJac1 - i1.$pDERLSJac1.dummyVarLSJac1   [dynamic]
+// 1/1 (1): i1.$pDERLSJac1.dummyVarLSJac1 = u1SeedLSJac1 / R1   [dynamic]
+// 2/2 (1): $res.1.$pDERLSJac1.dummyVarLSJac1 = R2 * i1.$pDERLSJac1.dummyVarLSJac1 + u1SeedLSJac1   [dynamic]
 //
 //
 // Simple Equations (0, 0)
@@ -6429,17 +6350,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 3 variables and equations
-// var 1 is solved in eqn 2
-// var 2 is solved in eqn 1
-// var 3 is solved in eqn 3
+// 2 variables and equations
+// var 1 is solved in eqn 1
+// var 2 is solved in eqn 2
 //
 //
 // StrongComponents
 // ========================================
-// {2:1}
-// {1:2}
-// {3:3}
+// {1:1}
+// {2:2}
 //
 //
 //
@@ -6448,15 +6367,15 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Known variables only depending on parameters and constants - globalKnownVars (9)
 // ========================================
-// 1: input uLSeedLSJac1:STATE_DER()  type: Real 
+// 1: input u1SeedLSJac1:STATE_DER()  type: Real 
 // 2: input iL:STATE(1)()  type: Real 
 // 3: input uC:DUMMY_STATE()  type: Real 
 // 4: input R2:PARAM()  = 2.0  type: Real 
 // 5: input R1:PARAM()  = 1.0  type: Real 
 // 6: input $res[1]:VARIABLE()  type: Real 
-// 7: input u1:VARIABLE()  type: Real 
-// 8: input i2:VARIABLE()  type: Real 
-// 9: input i1:VARIABLE()  type: Real 
+// 7: input i1:VARIABLE()  type: Real 
+// 8: input uL:VARIABLE()  type: Real 
+// 9: input i2:VARIABLE()  type: Real 
 //
 //
 // Known variables only depending on states and inputs - localKnownVars (0)
@@ -6471,9 +6390,10 @@ buildModel(testOptdaedump); getErrorString();
 // ========================================
 //
 //
-// Alias Variables (1)
+// Alias Variables (2)
 // ========================================
-// 1: u1.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -uLSeedLSJac1  type: Real 
+// 1: uL.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = -u1SeedLSJac1  type: Real 
+// 2: i2.$pDERLSJac1.dummyVarLSJac1:VARIABLE()  = i1.$pDERLSJac1.dummyVarLSJac1  type: Real 
 //
 //
 // Simple Shared Equations (0, 0)
@@ -6515,7 +6435,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -6525,22 +6445,20 @@ buildModel(testOptdaedump); getErrorString();
 // 6: uC:DUMMY_STATE()  type: Real 
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
-// 9: $cse1:VARIABLE()  type: Real  unreplaceable
-// 10: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
+// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [unknown]
-// 2/2 (1): $cse1 = sin(time)   [unknown]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): i1 = i2 + iL   [dynamic]
-// 5/5 (1): uL = R2 * i2   [dynamic]
-// 6/6 (1): u1 = uC - uL   [dynamic]
-// 7/7 (1): der(iL) = uL / L   [dynamic]
-// 8/8 (1): iC = (-C) * $cse1   [dynamic]
-// 9/9 (1): i0 = i1 + iC   [dynamic]
-// 10/10 (1): $DER.uC = -$cse1   [binding]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): der(iL) = uL / L   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -6553,29 +6471,27 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 8
-// var 2 is solved in eqn 7
-// var 3 is solved in eqn 5
-// var 4 is solved in eqn 4
-// var 5 is solved in eqn 9
-// var 6 is solved in eqn 1
-// var 7 is solved in eqn 6
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 2
-// var 10 is solved in eqn 10
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {2:9}
-// {8:1}
-// {10:10}
-// {1:6}
-// {{{6:8}, {5:3}, {3:4}}
-// ,{4:7}} Size: 1 linear
-// {9:5}
-// {7:2}
+// {9:6}
+// {8:9}
+// {5:1}
+// {{{1:4}, {2:7}, {7:3}}
+// ,{3:8}} Size: 1 linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -6649,7 +6565,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -6659,22 +6575,20 @@ buildModel(testOptdaedump); getErrorString();
 // 6: uC:DUMMY_STATE()  type: Real 
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
-// 9: $cse1:VARIABLE()  type: Real  unreplaceable
-// 10: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
+// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [unknown]
-// 2/2 (1): $cse1 = sin(time)   [unknown]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): i1 = i2 + iL   [dynamic]
-// 5/5 (1): uL = R2 * i2   [dynamic]
-// 6/6 (1): u1 = uC - uL   [dynamic]
-// 7/7 (1): der(iL) = uL / L   [dynamic]
-// 8/8 (1): iC = (-C) * $cse1   [dynamic]
-// 9/9 (1): i0 = i1 + iC   [dynamic]
-// 10/10 (1): $DER.uC = -$cse1   [binding]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): der(iL) = uL / L   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -6687,29 +6601,27 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 8
-// var 2 is solved in eqn 7
-// var 3 is solved in eqn 5
-// var 4 is solved in eqn 4
-// var 5 is solved in eqn 9
-// var 6 is solved in eqn 1
-// var 7 is solved in eqn 6
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 2
-// var 10 is solved in eqn 10
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {2:9}
-// {8:1}
-// {10:10}
-// {1:6}
-// {{{6:8}, {5:3}, {3:4}}
-// ,{4:7}} Size: 1 linear
-// {9:5}
-// {7:2}
+// {9:6}
+// {8:9}
+// {5:1}
+// {{{1:4}, {2:7}, {7:3}}
+// ,{3:8}} Size: 1 linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -6783,7 +6695,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -6793,22 +6705,20 @@ buildModel(testOptdaedump); getErrorString();
 // 6: uC:DUMMY_STATE()  type: Real 
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
-// 9: $cse1:VARIABLE()  type: Real  unreplaceable
-// 10: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
+// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [unknown]
-// 2/2 (1): $cse1 = sin(time)   [unknown]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): i1 = i2 + iL   [dynamic]
-// 5/5 (1): uL = R2 * i2   [dynamic]
-// 6/6 (1): u1 = uC - uL   [dynamic]
-// 7/7 (1): der(iL) = uL / L   [dynamic]
-// 8/8 (1): iC = (-C) * $cse1   [dynamic]
-// 9/9 (1): i0 = i1 + iC   [dynamic]
-// 10/10 (1): $DER.uC = -$cse1   [binding]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): der(iL) = uL / L   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -6821,29 +6731,27 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 8
-// var 2 is solved in eqn 7
-// var 3 is solved in eqn 5
-// var 4 is solved in eqn 4
-// var 5 is solved in eqn 9
-// var 6 is solved in eqn 1
-// var 7 is solved in eqn 6
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 2
-// var 10 is solved in eqn 10
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {2:9}
-// {8:1}
-// {10:10}
-// {1:6}
-// {{{6:8}, {5:3}, {3:4}}
-// ,{4:7}} Size: 1 linear
-// {9:5}
-// {7:2}
+// {9:6}
+// {8:9}
+// {5:1}
+// {{{1:4}, {2:7}, {7:3}}
+// ,{3:8}} Size: 1 linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -6917,7 +6825,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -6927,22 +6835,20 @@ buildModel(testOptdaedump); getErrorString();
 // 6: uC:DUMMY_STATE()  type: Real 
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
-// 9: $cse1:VARIABLE()  type: Real  unreplaceable
-// 10: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
+// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [unknown]
-// 2/2 (1): $cse1 = sin(time)   [unknown]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): i1 = i2 + iL   [dynamic]
-// 5/5 (1): uL = R2 * i2   [dynamic]
-// 6/6 (1): u1 = uC - uL   [dynamic]
-// 7/7 (1): der(iL) = uL / L   [dynamic]
-// 8/8 (1): iC = (-C) * $cse1   [dynamic]
-// 9/9 (1): i0 = i1 + iC   [dynamic]
-// 10/10 (1): $DER.uC = -$cse1   [binding]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): der(iL) = uL / L   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -6955,29 +6861,27 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 8
-// var 2 is solved in eqn 7
-// var 3 is solved in eqn 5
-// var 4 is solved in eqn 4
-// var 5 is solved in eqn 9
-// var 6 is solved in eqn 1
-// var 7 is solved in eqn 6
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 2
-// var 10 is solved in eqn 10
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {2:9}
-// {8:1}
-// {10:10}
-// {1:6}
-// {{{6:8}, {5:3}, {3:4}}
-// ,{4:7}} Size: 1 linear
-// {9:5}
-// {7:2}
+// {9:6}
+// {8:9}
+// {5:1}
+// {{{1:4}, {2:7}, {7:3}}
+// ,{3:8}} Size: 1 linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -7051,7 +6955,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -7061,22 +6965,20 @@ buildModel(testOptdaedump); getErrorString();
 // 6: uC:DUMMY_STATE()  type: Real 
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
-// 9: $cse1:VARIABLE()  type: Real  unreplaceable
-// 10: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
+// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [unknown]
-// 2/2 (1): $cse1 = sin(time)   [unknown]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): i1 = i2 + iL   [dynamic]
-// 5/5 (1): uL = R2 * i2   [dynamic]
-// 6/6 (1): u1 = uC - uL   [dynamic]
-// 7/7 (1): der(iL) = uL / L   [dynamic]
-// 8/8 (1): iC = (-C) * $cse1   [dynamic]
-// 9/9 (1): i0 = i1 + iC   [dynamic]
-// 10/10 (1): $DER.uC = -$cse1   [binding]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): der(iL) = uL / L   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -7089,29 +6991,27 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 8
-// var 2 is solved in eqn 7
-// var 3 is solved in eqn 5
-// var 4 is solved in eqn 4
-// var 5 is solved in eqn 9
-// var 6 is solved in eqn 1
-// var 7 is solved in eqn 6
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 2
-// var 10 is solved in eqn 10
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {2:9}
-// {8:1}
-// {10:10}
-// {1:6}
-// {{{6:8}, {5:3}, {3:4}}
-// ,{4:7}} Size: 1 linear
-// {9:5}
-// {7:2}
+// {9:6}
+// {8:9}
+// {5:1}
+// {{{1:4}, {2:7}, {7:3}}
+// ,{3:8}} Size: 1 linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -7185,7 +7085,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -7195,22 +7095,20 @@ buildModel(testOptdaedump); getErrorString();
 // 6: uC:DUMMY_STATE()  type: Real 
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
-// 9: $cse1:VARIABLE()  type: Real  unreplaceable
-// 10: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
+// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [unknown]
-// 2/2 (1): $cse1 = sin(time)   [unknown]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): i1 = i2 + iL   [dynamic]
-// 5/5 (1): uL = R2 * i2   [dynamic]
-// 6/6 (1): u1 = uC - uL   [dynamic]
-// 7/7 (1): der(iL) = uL / L   [dynamic]
-// 8/8 (1): iC = (-C) * $cse1   [dynamic]
-// 9/9 (1): i0 = i1 + iC   [dynamic]
-// 10/10 (1): $DER.uC = -$cse1   [binding]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): der(iL) = uL / L   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -7223,29 +7121,27 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 8
-// var 2 is solved in eqn 7
-// var 3 is solved in eqn 5
-// var 4 is solved in eqn 4
-// var 5 is solved in eqn 9
-// var 6 is solved in eqn 1
-// var 7 is solved in eqn 6
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 2
-// var 10 is solved in eqn 10
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {2:9}
-// {8:1}
-// {10:10}
-// {1:6}
-// {{{6:8}, {5:3}, {3:4}}
-// ,{4:7}} Size: 1 linear
-// {9:5}
-// {7:2}
+// {9:6}
+// {8:9}
+// {5:1}
+// {{{1:4}, {2:7}, {7:3}}
+// ,{3:8}} Size: 1 linear
+// {6:5}
+// {4:2}
 //
 //
 //
@@ -7319,7 +7215,7 @@ buildModel(testOptdaedump); getErrorString();
 // unspecified partition
 // ========================================
 //
-// Variables (10)
+// Variables (9)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 
 // 2: iL:STATE(1)()  type: Real 
@@ -7329,22 +7225,20 @@ buildModel(testOptdaedump); getErrorString();
 // 6: uC:DUMMY_STATE()  type: Real 
 // 7: uL:VARIABLE()  type: Real 
 // 8: u1:VARIABLE()  type: Real 
-// 9: $cse1:VARIABLE()  type: Real  unreplaceable
-// 10: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
+// 9: $DER.uC:DUMMY_DER(fixed = false )  type: Real 
 //
 //
-// Equations (10, 10)
+// Equations (9, 9)
 // ========================================
-// 1/1 (1): uC = cos(time)   [unknown]
-// 2/2 (1): $cse1 = sin(time)   [unknown]
-// 3/3 (1): u1 = R1 * i1   [dynamic]
-// 4/4 (1): i1 = i2 + iL   [dynamic]
-// 5/5 (1): uL = R2 * i2   [dynamic]
-// 6/6 (1): u1 = uC - uL   [dynamic]
-// 7/7 (1): der(iL) = uL / L   [dynamic]
-// 8/8 (1): iC = (-C) * $cse1   [dynamic]
-// 9/9 (1): i0 = i1 + iC   [dynamic]
-// 10/10 (1): $DER.uC = -$cse1   [binding]
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u1 = uC - uL   [dynamic]
+// 3/3 (1): uL = R2 * i2   [dynamic]
+// 4/4 (1): der(iL) = uL / L   [dynamic]
+// 5/5 (1): iC = C * $DER.uC   [dynamic]
+// 6/6 (1): i0 = i1 + iC   [dynamic]
+// 7/7 (1): i1 = i2 + iL   [dynamic]
+// 8/8 (1): $DER.uC = -sin(time)   [unknown]
+// 9/9 (1): uC = cos(time)   [unknown]
 //
 //
 // Simple Equations (0, 0)
@@ -7357,29 +7251,27 @@ buildModel(testOptdaedump); getErrorString();
 //
 // Matching
 // ========================================
-// 10 variables and equations
-// var 1 is solved in eqn 8
-// var 2 is solved in eqn 7
-// var 3 is solved in eqn 5
-// var 4 is solved in eqn 4
-// var 5 is solved in eqn 9
-// var 6 is solved in eqn 1
-// var 7 is solved in eqn 6
-// var 8 is solved in eqn 3
-// var 9 is solved in eqn 2
-// var 10 is solved in eqn 10
+// 9 variables and equations
+// var 1 is solved in eqn 5
+// var 2 is solved in eqn 4
+// var 3 is solved in eqn 3
+// var 4 is solved in eqn 7
+// var 5 is solved in eqn 6
+// var 6 is solved in eqn 9
+// var 7 is solved in eqn 2
+// var 8 is solved in eqn 1
+// var 9 is solved in eqn 8
 //
 //
 // StrongComponents
 // ========================================
-// {2:9}
-// {8:1}
-// {10:10}
-// {1:6}
-// {{{6:8}, {5:3}, {3:4}}
-// ,{4:7}} Size: 1 linear
-// {9:5}
-// {7:2}
+// {9:6}
+// {8:9}
+// {5:1}
+// {{{1:4}, {2:7}, {7:3}}
+// ,{3:8}} Size: 1 linear
+// {6:5}
+// {4:2}
 //
 //
 //

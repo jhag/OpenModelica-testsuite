@@ -53,6 +53,23 @@ simulate(CSE.TestCall7); getErrorString();
 // cse replacements (1/44)
 // ========================================
 // 1: $cse1 - CSE.TestCall7.func(time) - {}
+//
+// ########### Updated Variable List (simulation) ########### (4)
+// ========================================
+// 1: $cse1.y:VARIABLE()  type: Real  unreplaceable
+// 2: $cse1.x:VARIABLE()  type: Real  unreplaceable
+// 3: $cse2.y:VARIABLE()  type: Real  unreplaceable
+// 4: $cse2.x:VARIABLE()  type: Real  unreplaceable
+//
+//
+// ########### Updated Equation List (simulation) ########### (2, 4)
+// ========================================
+// 1/1 (2): $cse1 = $cse2   [unknown]
+// 2/3 (2): $cse2 = CSE.TestCall7.func(time)   [unknown]
+//
+// cse replacements (1/44)
+// ========================================
+// 1: $cse2 - CSE.TestCall7.func(time) - {}
 // record SimulationResult
 //     resultFile = "CSE.TestCall7_res.mat",
 //     simulationOptions = "startTime = 0.0, stopTime = 1.0, numberOfIntervals = 500, tolerance = 1e-06, method = 'dassl', fileNamePrefix = 'CSE.TestCall7', options = '', outputFormat = 'mat', variableFilter = '.*', cflags = '', simflags = ''",

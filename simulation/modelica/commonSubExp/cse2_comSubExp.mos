@@ -49,6 +49,37 @@ simulate(Tearing3); getErrorString();
 // true
 // ""
 //
+// ########### Updated Variable List (simulation) ########### (10)
+// ========================================
+// 1: iC:VARIABLE()  type: Real 
+// 2: iL:STATE(1)()  type: Real 
+// 3: i2:VARIABLE(start = 0.0 fixed = true )  type: Real 
+// 4: i1:VARIABLE()  type: Real 
+// 5: i0:VARIABLE()  type: Real 
+// 6: uC:STATE(1)()  type: Real 
+// 7: uL:VARIABLE()  type: Real 
+// 8: u2:VARIABLE()  type: Real 
+// 9: u1:VARIABLE()  type: Real 
+// 10: u0:VARIABLE()  type: Real 
+//
+//
+// ########### Updated Equation List (simulation) ########### (10, 10)
+// ========================================
+// 1/1 (1): u1 = R1 * i1   [dynamic]
+// 2/2 (1): u2 = R2 * i2   [dynamic]
+// 3/3 (1): uL = L * der(iL)   [dynamic]
+// 4/4 (1): iC = C * der(uC)   [dynamic]
+// 5/5 (1): u0 = u1 + uL   [dynamic]
+// 6/6 (1): uC = u1 + u2   [dynamic]
+// 7/7 (1): uL = u2   [dynamic]
+// 8/8 (1): i0 = i1 + iC   [dynamic]
+// 9/9 (1): i1 = i2 + iL   [dynamic]
+// 10/10 (1): u0 = sin(time)   [unknown]
+//
+// cse replacements (1/52)
+// ========================================
+// 1: u0 - sin(time) - {}
+//
 // ########### Updated Variable List (simulation) ########### (11)
 // ========================================
 // 1: iC:VARIABLE()  type: Real 

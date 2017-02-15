@@ -61,6 +61,26 @@ simulate(CSE.TestCall6); getErrorString();
 // ========================================
 // 1: a - CSE.TestCall6.f2($cse1) - {}
 // 2: $cse1 - CSE.TestCall6.f(time) - {}
+//
+// ########### Updated Variable List (simulation) ########### (5)
+// ========================================
+// 1: a:VARIABLE()  type: Real 
+// 2: $cse1.y:VARIABLE()  type: Real  unreplaceable
+// 3: $cse1.x:VARIABLE()  type: Real  unreplaceable
+// 4: $cse2.y:VARIABLE()  type: Real  unreplaceable
+// 5: $cse2.x:VARIABLE()  type: Real  unreplaceable
+//
+//
+// ########### Updated Equation List (simulation) ########### (3, 5)
+// ========================================
+// 1/1 (2): $cse1 = $cse2   [unknown]
+// 2/3 (1): a = CSE.TestCall6.f2($cse1)   [unknown]
+// 3/4 (2): $cse2 = CSE.TestCall6.f(time)   [unknown]
+//
+// cse replacements (2/45)
+// ========================================
+// 1: a - CSE.TestCall6.f2($cse1) - {}
+// 2: $cse2 - CSE.TestCall6.f(time) - {}
 // record SimulationResult
 //     resultFile = "CSE.TestCall6_res.mat",
 //     simulationOptions = "startTime = 0.0, stopTime = 1.0, numberOfIntervals = 500, tolerance = 1e-06, method = 'dassl', fileNamePrefix = 'CSE.TestCall6', options = '', outputFormat = 'mat', variableFilter = '.*', cflags = '', simflags = ''",

@@ -20,19 +20,19 @@ getErrorString();
 //
 // indxdae: eqns in order
 // ========================================
-// SingleEquation: 3
+// SingleEquation: 4
 // 1: a:VARIABLE()  type: Real 
 // 1/1 (1): a = time   [dynamic]
 //
-// SingleEquation: 4
-// 1: r2.y:VARIABLE()  type: Real 
-// 1/1 (1): r2.y = PartEvalFunc.recfunc_eval1(PartEvalFunc.record1(2.0, a), a)   [unknown]
+// SingleEquation: 1
+// 1: $cse1.y:VARIABLE()  type: Real  unreplaceable
+// 1/1 (1): $cse1.y = PartEvalFunc.recfunc_eval1(PartEvalFunc.record1(2.0, a), a)   [unknown]
+//
+// SingleEquation: 3
+// 1: c:VARIABLE()  type: Real 
+// 1/1 (1): c = $cse1.y + a   [dynamic]
 //
 // SingleEquation: 2
-// 1: c:VARIABLE()  type: Real 
-// 1/1 (1): c = r2.y + a   [dynamic]
-//
-// SingleEquation: 1
 // 1: d:STATE(1,c)()  type: Real 
 // 1/1 (1): der(d) = c   [dynamic]
 //

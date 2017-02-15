@@ -42,8 +42,8 @@ runScript(modelTesting);getErrorString();
 //  * Number of discrete variables: 333 ('-d=discreteinfo' for list of discrete vars)
 //  * Number of discrete states: 0 ('-d=discreteinfo' for list of discrete states)
 //  * Top-level inputs: 0
-// Notification: Strong component statistics for initialization (2774):
-//  * Single equations (assignments): 2767
+// Notification: Strong component statistics for initialization (2783):
+//  * Single equations (assignments): 2776
 //  * Array equations: 6
 //  * Algorithm blocks: 0
 //  * Record equations: 0
@@ -53,16 +53,16 @@ runScript(modelTesting);getErrorString();
 //  * Torn equation systems: 1
 //  * Mixed (continuous/discrete) equation systems: 0
 // Notification: Torn system details for strict tearing set:
-//  * Linear torn systems: 1 {(3,77.8%) 519}
-//  * Non-linear torn systems: 0
+//  * Linear torn systems: 0
+//  * Non-linear torn systems: 1 {3 543}
 // Notification: Model statistics after passing the back-end for simulation:
 //  * Number of independent subsystems: 112
 //  * Number of states: 4 (load.phi,load.w,filter.x[1],filter.x[2])
 //  * Number of discrete variables: 0 ('-d=discreteinfo' for list of discrete vars)
 //  * Number of discrete states: 0 ('-d=discreteinfo' for list of discrete states)
 //  * Top-level inputs: 0
-// Notification: Strong component statistics for simulation (1325):
-//  * Single equations (assignments): 1324
+// Notification: Strong component statistics for simulation (1332):
+//  * Single equations (assignments): 1331
 //  * Array equations: 0
 //  * Algorithm blocks: 0
 //  * Record equations: 0
@@ -72,8 +72,8 @@ runScript(modelTesting);getErrorString();
 //  * Torn equation systems: 1
 //  * Mixed (continuous/discrete) equation systems: 0
 // Notification: Torn system details for strict tearing set:
-//  * Linear torn systems: 1 {(1,100.0%) 419}
-//  * Non-linear torn systems: 0
+//  * Linear torn systems: 0
+//  * Non-linear torn systems: 1 {1 443}
 //
 // "true
 // "

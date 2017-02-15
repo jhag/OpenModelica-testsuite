@@ -99,33 +99,32 @@ readFile("linear_p_nonlinsys.log"); // Check that output log is empty
 //   // top-level inputs
 //   parameter Integer l = 2;
 //   // top-level outputs
-//   parameter Integer nz = 6;
+//   parameter Integer nz = 5;
 //   // data recovery variables
 //   parameter Real x0[3] = {1, 1, 2};
 //   parameter Real u0[1] = {0};
-//   parameter Real z0[6] = {0, -6, -6, 0, 0, 0};
+//   parameter Real z0[5] = {-6, -6, 0, 0, 0};
 //   parameter Real A[3, 3] = [0, 0, 0; 0, 5.999999994797209, -2.000000002708405; 0, 3.999999998752807, -6.000000017010549];
 //   parameter Real B[3, 1] = [0; 0; 0];
 //   parameter Real C[2, 3] = [0, 0, 0; 0, 0, 0];
 //   parameter Real D[2, 1] = [0; 0];
-//   parameter Real Cz[6, 3] = [0, 0, 0; 0, 9.999999993550016, -8.000000019718954; 0, 9.999999993550016, -8.000000019718954; 0, 0, 0; 0, 0, 0; 0, 0, 0];
-//   parameter Real Dz[6, 1] = [0; 0; 0; 1; 0; 0];
+//   parameter Real Cz[5, 3] = [0, 9.999999993550016, -8.000000019718954; 0, 9.999999993550016, -8.000000019718954; 0, 0, 0; 0, 0, 0; 0, 0, 0];
+//   parameter Real Dz[5, 1] = [0; 0; 1; 0; 0];
 //   Real x[3](start = x0);
 //   input Real u[1](start = u0);
 //   output Real y[2];
-//   output Real z[6];
+//   output Real z[5];
 //   Real 'x_b1.x' = x[1];
 //   Real 'x_c1.x1' = x[2];
 //   Real 'x_c1.x2' = x[3];
 //   Real 'u_u1' = u[1];
 //   Real 'y_y1' = y[1];
 //   Real 'y_y2' = y[2];
-//   Real 'z_a1.y' = z[1];
-//   Real 'z_c1.y' = z[2];
-//   Real 'z_c1.y1' = z[3];
-//   Real 'z_u1' = z[4];
-//   Real 'z_y1' = z[5];
-//   Real 'z_y2' = z[6];
+//   Real 'z_c1.y' = z[1];
+//   Real 'z_c1.y1' = z[2];
+//   Real 'z_u1' = z[3];
+//   Real 'z_y1' = z[4];
+//   Real 'z_y2' = z[5];
 // equation
 //   der(x) = A * x + B * u;
 //   y = C * x + D * u;

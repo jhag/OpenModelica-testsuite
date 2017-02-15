@@ -42,6 +42,37 @@ simulate(CSE.TestCall1); getErrorString();
 // true
 // ""
 //
+// ########### Updated Variable List (simulation) ########### (9)
+// ========================================
+// 1: E:VARIABLE()  type: Real 
+// 2: D:VARIABLE()  type: Real 
+// 3: C:VARIABLE()  type: Real 
+// 4: B:VARIABLE()  type: Real 
+// 5: A:VARIABLE()  type: Real 
+// 6: y:VARIABLE()  type: Real 
+// 7: x:VARIABLE()  type: Real 
+// 8: $cse2:VARIABLE()  type: Real  unreplaceable
+// 9: $cse1:VARIABLE()  type: Real  unreplaceable
+//
+//
+// ########### Updated Equation List (simulation) ########### (8, 9)
+// ========================================
+// 1/1 (1): B = 4.0   [binding]
+// 2/2 (1): C = 1.0 + time   [binding]
+// 3/3 (1): A = B * C   [dynamic]
+// 4/4 (1): E = A + $cse1   [dynamic]
+// 5/5 (2): (x, y) = CSE.TestCall1.f(time)   [unknown]
+// 6/7 (1): D = log(A)   [unknown]
+// 7/8 (1): $cse1 = log($cse2)   [unknown]
+// 8/9 (1): $cse2 = log(D)   [unknown]
+//
+// cse replacements (4/49)
+// ========================================
+// 1: (x, y) - CSE.TestCall1.f(time) - {}
+// 2: D - log(A) - {}
+// 3: $cse1 - log($cse2) - {}
+// 4: $cse2 - log(D) - {}
+//
 // ########### Updated Variable List (simulation) ########### (2)
 // ========================================
 // 1: y:VARIABLE()  type: Real 
@@ -52,7 +83,7 @@ simulate(CSE.TestCall1); getErrorString();
 // ========================================
 // 1/1 (2): (x, y) = CSE.TestCall1.f(time)   [unknown]
 //
-// cse replacements (1/46)
+// cse replacements (1/48)
 // ========================================
 // 1: (x, y) - CSE.TestCall1.f(time) - {}
 //
@@ -71,14 +102,14 @@ simulate(CSE.TestCall1); getErrorString();
 // 1/1 (1): E = A + $cse1   [dynamic]
 // 2/2 (1): A = 4.0 * C   [dynamic]
 // 3/3 (1): C = 1.0 + time   [binding]
-// 4/4 (1): $cse1 = log($cse2)   [unknown]
-// 5/5 (1): $cse2 = log(D)   [unknown]
+// 4/4 (1): $cse2 = log(D)   [unknown]
+// 5/5 (1): $cse1 = log($cse2)   [unknown]
 // 6/6 (1): D = log(A)   [unknown]
 //
-// cse replacements (3/46)
+// cse replacements (3/48)
 // ========================================
-// 1: $cse1 - log($cse2) - {}
-// 2: $cse2 - log(D) - {}
+// 1: $cse2 - log(D) - {}
+// 2: $cse1 - log($cse2) - {}
 // 3: D - log(A) - {}
 // record SimulationResult
 //     resultFile = "CSE.TestCall1_res.mat",

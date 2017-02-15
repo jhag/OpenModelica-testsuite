@@ -43,7 +43,7 @@ simulate(nonlinearSolverTests.bug_2841, stopTime=0.0, simflags="-lv=LOG_INIT,LOG
 // LOG_INIT          | info    | initialization method: symbolic        [solves the initialization problem symbolically - default]
 // LOG_NLS_V         | info    | ------------------------------------------------------
 // LOG_NLS_V         | info    | SOLVING NON-LINEAR SYSTEM USING MIXED SOLVER (Newton/Homotopy solver)
-// LOG_NLS_V         | info    | EQUATION NUMBER: 7
+// LOG_NLS_V         | info    | EQUATION NUMBER: 11
 // LOG_NLS_V         | info    | TIME:   0.0000000000e+00
 // LOG_NLS_V         | info    | number of function calls (so far!):  0
 // LOG_NLS_V         | info    | System values [2-dim]
@@ -56,7 +56,7 @@ simulate(nonlinearSolverTests.bug_2841, stopTime=0.0, simflags="-lv=LOG_INIT,LOG
 // |                 | |       | |            50000            5e-06 
 // LOG_NLS_V         | info    | regular initial point!!!
 // LOG_NLS_V         | info    | ******************************************************
-// LOG_NLS_V         | info    | NEWTON SOLVER STARTED! equation number:  7
+// LOG_NLS_V         | info    | NEWTON SOLVER STARTED! equation number:  11
 // LOG_NLS_V         | info    | maximum number of function evaluation:  200
 // LOG_NLS           | info    | nls status
 // |                 | |       | | variables
@@ -137,7 +137,7 @@ simulate(nonlinearSolverTests.bug_2841, stopTime=0.0, simflags="-lv=LOG_INIT,LOG
 // LOG_NLS_V         | info    | Need to damp, grad_f =   -9.7443309630e-06
 // LOG_NLS_V         | info    | Need to damp, error_f =    2.2072982312e-03
 // LOG_NLS_V         | info    | Need to damp this!! lambda1 =    1.0000000000e+00
-// LOG_NLS_V         | info    | Need to damp, error_f1 =    1.4052454980e-06
+// LOG_NLS_V         | info    | Need to damp, error_f1 =    1.4052454976e-06
 // LOG_NLS_V         | info    | Need to damp, forced error =    3.8977323852e-06
 // LOG_NLS_V         | info    | function values: [2-dim]
 // |                 | |       | |    1.2530283e-06    6.3610929e-07 
@@ -147,26 +147,26 @@ simulate(nonlinearSolverTests.bug_2841, stopTime=0.0, simflags="-lv=LOG_INIT,LOG
 // LOG_NLS_V         | info    | delta_x        =   6.2746972448e+01
 // LOG_NLS_V         | info    | delta_x_scaled =   6.2746972448e-04
 // LOG_NLS_V         | info    | newtonXTol          =   1.0000000000e-12
-// LOG_NLS_V         | info    | error_f        =   1.4052454980e-06
-// LOG_NLS_V         | info    | error_f_scaled =   3.6386816259e-07
+// LOG_NLS_V         | info    | error_f        =   1.4052454976e-06
+// LOG_NLS_V         | info    | error_f_scaled =   3.6386816246e-07
 // LOG_NLS_V         | info    | newtonFTol          =   1.0000000000e-12
 // LOG_NLS_V         | info    | Iteration: 5
 // LOG_NLS_V         | info    | newton step
 // |                 | |       | | variables
 // |                 | |       | | [ 1]                              x  =       -77390.689		 step =      0.027596879		 old =       -77390.717
 // |                 | |       | | [ 2]                              y  =    3.3118158e-06		 step =   -2.4308011e-12		 old =    3.3118182e-06
-// LOG_NLS_V         | info    | Need to damp, grad_f =   -3.9494298196e-12
-// LOG_NLS_V         | info    | Need to damp, error_f =    1.4052454980e-06
+// LOG_NLS_V         | info    | Need to damp, grad_f =   -3.9494298168e-12
+// LOG_NLS_V         | info    | Need to damp, error_f =    1.4052454976e-06
 // LOG_NLS_V         | info    | Need to damp this!! lambda1 =    1.0000000000e+00
 // LOG_NLS_V         | info    | Need to damp, error_f1 =    5.5523886249e-13
-// LOG_NLS_V         | info    | Need to damp, forced error =    1.5797719278e-12
+// LOG_NLS_V         | info    | Need to damp, forced error =    1.5797719267e-12
 // LOG_NLS_V         | info    | function values: [2-dim]
 // |                 | |       | |    5.1558757e-13    2.0605739e-13 
 // LOG_NLS_V         | info    | scaled function values: [2-dim]
 // |                 | |       | |    1.0271701e-13     8.595627e-14 
 // LOG_NLS_V         | info    | error measurements:
-// LOG_NLS_V         | info    | delta_x        =   2.7596879198e-02
-// LOG_NLS_V         | info    | delta_x_scaled =   2.7596879199e-07
+// LOG_NLS_V         | info    | delta_x        =   2.7596879188e-02
+// LOG_NLS_V         | info    | delta_x_scaled =   2.7596879189e-07
 // LOG_NLS_V         | info    | newtonXTol          =   1.0000000000e-12
 // LOG_NLS_V         | info    | error_f        =   5.5523886249e-13
 // LOG_NLS_V         | info    | error_f_scaled =   1.3393753756e-13
@@ -214,14 +214,14 @@ simulate(nonlinearSolverTests.bug_2841, stopTime=0.0, simflags="-lv=LOG_INIT,LOG
 // |                 | |       | | | [2] parameter Real yn(start=1e-05, fixed=true) = 1e-05
 // LOG_SOTI          | info    | ### SOLUTION OF THE INITIALIZATION ###
 // |                 | |       | | other real variables
-// |                 | |       | | | [1] Real $cse3(start=0, nominal=1) = 0 (pre: 0)
-// |                 | |       | | | [2] Real $cse4(start=0, nominal=1) = 0 (pre: 0)
+// |                 | |       | | | [1] Real $cse1(start=0, nominal=1) = 1.29215 (pre: 0)
+// |                 | |       | | | [2] Real $cse2(start=0, nominal=1) = 3.01949 (pre: 0)
 // |                 | |       | | | [3] Real x(start=50000, nominal=100000) = -77390.7 (pre: 50000)
 // |                 | |       | | | [4] Real y(start=5e-06, nominal=1e-05) = 3.31182e-06 (pre: 5e-06)
 // LOG_INIT          | info    | ### END INITIALIZATION ###
 // LOG_NLS_V         | info    | ------------------------------------------------------
 // LOG_NLS_V         | info    | SOLVING NON-LINEAR SYSTEM USING MIXED SOLVER (Newton/Homotopy solver)
-// LOG_NLS_V         | info    | EQUATION NUMBER: 18
+// LOG_NLS_V         | info    | EQUATION NUMBER: 22
 // LOG_NLS_V         | info    | TIME:   0.0000000000e+00
 // LOG_NLS_V         | info    | number of function calls (so far!):  0
 // LOG_NLS_V         | info    | System values [2-dim]
@@ -234,7 +234,7 @@ simulate(nonlinearSolverTests.bug_2841, stopTime=0.0, simflags="-lv=LOG_INIT,LOG
 // |                 | |       | |       -77390.689    3.3118158e-06 
 // LOG_NLS_V         | info    | regular initial point!!!
 // LOG_NLS_V         | info    | ******************************************************
-// LOG_NLS_V         | info    | NEWTON SOLVER STARTED! equation number:  18
+// LOG_NLS_V         | info    | NEWTON SOLVER STARTED! equation number:  22
 // LOG_NLS_V         | info    | maximum number of function evaluation:  200
 // LOG_NLS           | info    | nls status
 // |                 | |       | | variables
@@ -279,7 +279,7 @@ simulate(nonlinearSolverTests.bug_2841, stopTime=0.0, simflags="-lv=LOG_INIT,LOG
 // |                 | |       | |       -77390.689    3.3118158e-06 
 // LOG_NLS_V         | info    | ------------------------------------------------------
 // LOG_NLS_V         | info    | SOLVING NON-LINEAR SYSTEM USING MIXED SOLVER (Newton/Homotopy solver)
-// LOG_NLS_V         | info    | EQUATION NUMBER: 18
+// LOG_NLS_V         | info    | EQUATION NUMBER: 22
 // LOG_NLS_V         | info    | TIME:   0.0000000000e+00
 // LOG_NLS_V         | info    | number of function calls (so far!):  2
 // LOG_NLS_V         | info    | System values [2-dim]

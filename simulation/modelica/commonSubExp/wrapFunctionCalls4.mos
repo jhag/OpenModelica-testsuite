@@ -64,6 +64,31 @@ simulate(CSE.wrapFunctionCalls4); getErrorString();
 // 3: ($cse3, b, _) - CSE.wrapFunctionCalls4.f1(x, x) - {}
 // 4: $cse2 - sin($cse3) - {}
 // 5: ($cse3, _, _) - ($cse3, b, _) - {}
+//
+// ########### Updated Variable List (simulation) ########### (6)
+// ========================================
+// 1: c:VARIABLE()  type: Real 
+// 2: b:VARIABLE()  type: Real 
+// 3: x:VARIABLE()  type: Real 
+// 4: $cse2:VARIABLE()  type: Real  unreplaceable
+// 5: $cse3:VARIABLE()  type: Real  unreplaceable
+// 6: $cse1:VARIABLE()  type: Real  unreplaceable
+//
+//
+// ########### Updated Equation List (simulation) ########### (5, 6)
+// ========================================
+// 1/1 (1): c = 5.0 + $cse2   [dynamic]
+// 2/2 (1): x = sin($cse1)   [unknown]
+// 3/3 (1): $cse1 = cos(time)   [unknown]
+// 4/4 (2): ($cse3, b, _) = CSE.wrapFunctionCalls4.f1(x, x)   [unknown]
+// 5/6 (1): $cse2 = sin($cse3)   [unknown]
+//
+// cse replacements (4/48)
+// ========================================
+// 1: x - sin($cse1) - {}
+// 2: $cse1 - cos(time) - {}
+// 3: ($cse3, b, _) - CSE.wrapFunctionCalls4.f1(x, x) - {}
+// 4: $cse2 - sin($cse3) - {}
 // record SimulationResult
 //     resultFile = "CSE.wrapFunctionCalls4_res.mat",
 //     simulationOptions = "startTime = 0.0, stopTime = 1.0, numberOfIntervals = 500, tolerance = 1e-06, method = 'dassl', fileNamePrefix = 'CSE.wrapFunctionCalls4', options = '', outputFormat = 'mat', variableFilter = '.*', cflags = '', simflags = ''",

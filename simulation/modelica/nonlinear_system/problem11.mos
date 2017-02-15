@@ -323,7 +323,7 @@ val(x[1],{0.0, 0.5, 1.0, 1.5, 5});
 // assert            | debug   | division leads to inf or nan at time 0, (a=1) / (b=0), where divisor b is: a
 // assert            | debug   | division leads to inf or nan at time 0, (a=1) / (b=0), where divisor b is: a
 // assert            | debug   | division leads to inf or nan at time 0, (a=1) / (b=0), where divisor b is: a
-// assert            | debug   | Solving non-linear system 7 failed at time=0.
+// assert            | debug   | Solving non-linear system 9 failed at time=0.
 // |                 | |       | For more information please use -lv LOG_NLS.
 // assert            | info    | simulation terminated by an assertion at initialization
 // "
@@ -339,15 +339,15 @@ val(x[1],{0.0, 0.5, 1.0, 1.5, 5});
 // x[1]
 // x[2]
 // ------------
-// update eqn[4]
-// x[3] / a = (a ^ 2.0 + b ^ 2.0) * x[2] / a + log(1.0 + time) + ((-a ^ 2.0) - b ^ 2.0) * x[1] / a + 1.0 / a + (-a) - b--old--
-// => (a ^ 2.0 + b ^ 2.0) * x[2] + ((-a ^ 2.0) - b ^ 2.0) * x[1] - x[3] = -1.0 + a ^ 2.0 + (b - log(1.0 + time)) * a--new--
-// update eqn[5]
+// update eqn[6]
+// x[3] / a = (a ^ 2.0 + b ^ 2.0) * x[2] / a + $cse2 + ((-a ^ 2.0) - b ^ 2.0) * x[1] / a + 1.0 / a + (-a) - b--old--
+// => (a ^ 2.0 + b ^ 2.0) * x[2] + ((-a ^ 2.0) - b ^ 2.0) * x[1] - x[3] = -1.0 + a ^ 2.0 + (b - $cse2) * a--new--
+// update eqn[7]
 // x[2] ^ 2.0 = b + x[1] / b + a - a * x[2] ^ 2.0--old--
 // => x[1] - b * x[2] ^ 2.0 * (1.0 + a) = ((-b) - a) * b--new--
-// update eqn[6]
-// x[1] = b * (x[2] ^ 2.0 + x[3] + cos(time))--old--
-// => b * (cos(time) + x[2] ^ 2.0 + x[3]) - x[1] = 0.0--new--
+// update eqn[8]
+// x[1] = b * (x[2] ^ 2.0 + x[3] + $cse1)--old--
+// => b * ($cse1 + x[2] ^ 2.0 + x[3]) - x[1] = 0.0--new--
 // END: simplifyLoops
 // START: simplifyLoops
 // ------ Tearing ------
@@ -382,20 +382,19 @@ val(x[1],{0.0, 0.5, 1.0, 1.5, 5});
 // x[1]
 // x[2]
 // ------------
-// update eqn[4]
-// x[3] / a = (a ^ 2.0 + b ^ 2.0) * x[2] / a + log(1.0 + time) + ((-a ^ 2.0) - b ^ 2.0) * x[1] / a + 1.0 / a + (-a) - b--old--
-// __OMC__0$LOOPT = -1.0 + a ^ 2.0 + (b - log(1.0 + time)) * a -- new eqn--
+// update eqn[6]
+// x[3] / a = (a ^ 2.0 + b ^ 2.0) * x[2] / a + $cse2 + ((-a ^ 2.0) - b ^ 2.0) * x[1] / a + 1.0 / a + (-a) - b--old--
+// __OMC__0$LOOPT = -1.0 + a ^ 2.0 + (b - $cse2) * a -- new eqn--
 // __OMC__2$LOOPF = (-a ^ 2.0) - b ^ 2.0 -- new eqn--
 // __OMC__3$LOOPF = a ^ 2.0 + b ^ 2.0 -- new eqn--
 // => __OMC__3$LOOPF * x[2] + __OMC__2$LOOPF * x[1] - x[3] = __OMC__0$LOOPT--new--
-// update eqn[5]
+// update eqn[7]
 // x[2] ^ 2.0 = b + x[1] / b + a - a * x[2] ^ 2.0--old--
 // __OMC__2$LOOPT = ((-b) - a) * b -- new eqn--
 // => x[1] - b * x[2] ^ 2.0 * (1.0 + a) = __OMC__2$LOOPT--new--
-// update eqn[6]
-// x[1] = b * (x[2] ^ 2.0 + x[3] + cos(time))--old--
-// __OMC__9$LOOPT = cos(time) -- new eqn--
-// => b * (__OMC__9$LOOPT + x[2] ^ 2.0 + x[3]) - x[1] = 0.0--new--
+// update eqn[8]
+// x[1] = b * (x[2] ^ 2.0 + x[3] + $cse1)--old--
+// => b * ($cse1 + x[2] ^ 2.0 + x[3]) - x[1] = 0.0--new--
 // END: simplifyLoops
 // START: simplifyLoops
 // ------ Tearing ------

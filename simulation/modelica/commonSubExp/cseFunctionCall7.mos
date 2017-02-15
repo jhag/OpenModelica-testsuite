@@ -69,39 +69,76 @@ simulate(CSE.FunctionCallTest7); getErrorString();
 // true
 // ""
 //
-// ########### Updated Variable List (simulation) ########### (12)
+// ########### Updated Variable List (simulation) ########### (15)
 // ========================================
-// 1: r.r1:VARIABLE()  type: Real 
-// 2: b[2]:VARIABLE()  type: Real  [2]
-// 3: b[1]:VARIABLE()  type: Real  [2]
-// 4: a[2]:VARIABLE()  type: Real  [2]
-// 5: a[1]:VARIABLE()  type: Real  [2]
-// 6: z:VARIABLE()  type: Real 
-// 7: y:VARIABLE()  type: Real 
-// 8: x:VARIABLE()  type: Real 
-// 9: $cse3.r2:DISCRETE()  type: Integer  unreplaceable
-// 10: $cse3.r1:VARIABLE()  type: Real  unreplaceable
-// 11: $cse2:VARIABLE()  type: Real  unreplaceable
-// 12: $cse1:VARIABLE()  type: Real  unreplaceable
+// 1: r.r2:DISCRETE()  type: Integer 
+// 2: r.r1:VARIABLE()  type: Real 
+// 3: b[2]:VARIABLE()  type: Real  [2]
+// 4: b[1]:VARIABLE()  type: Real  [2]
+// 5: a[2]:VARIABLE()  type: Real  [2]
+// 6: a[1]:VARIABLE()  type: Real  [2]
+// 7: z:VARIABLE()  type: Real 
+// 8: y:VARIABLE()  type: Real 
+// 9: x:VARIABLE()  type: Real 
+// 10: $cse4.r2:DISCRETE()  type: Integer  unreplaceable
+// 11: $cse4.r1:VARIABLE()  type: Real  unreplaceable
+// 12: $cse3.r2:DISCRETE()  type: Integer  unreplaceable
+// 13: $cse3.r1:VARIABLE()  type: Real  unreplaceable
+// 14: $cse2:VARIABLE()  type: Real  unreplaceable
+// 15: $cse1:VARIABLE()  type: Real  unreplaceable
 //
 //
-// ########### Updated Equation List (simulation) ########### (7, 12)
+// ########### Updated Equation List (simulation) ########### (8, 15)
 // ========================================
 // 1/1 (1): x = $cse1 * r.r1   [dynamic]
 // 2/2 (3): (z, b) = (y, a)   [dynamic]
-// 3/5 (1): $cse1 = sin(time * $cse2)   [unknown]
-// 4/6 (1): $cse2 = cos(time)   [unknown]
-// 5/7 (3): (y, a) = CSE.functions.f5(time, x, $cse3)   [unknown]
-// 6/10 (2): $cse3 = CSE.functions.f6(time, x)   [unknown]
-// 7/12 (1): r.r1 = CSE.functions.f6_eval4(time, time)   [unknown]
+// 3/5 (2): r = $cse4   [dynamic]
+// 4/7 (1): $cse1 = sin(time * $cse2)   [unknown]
+// 5/8 (1): $cse2 = cos(time)   [unknown]
+// 6/9 (3): (y, a) = CSE.functions.f5(time, x, $cse3)   [unknown]
+// 7/12 (2): $cse3 = CSE.functions.f6(time, x)   [unknown]
+// 8/14 (2): $cse4 = CSE.functions.f6(time, time)   [unknown]
 //
-// cse replacements (5/50)
+// cse replacements (5/51)
 // ========================================
 // 1: $cse1 - sin(time * $cse2) - {}
 // 2: $cse2 - cos(time) - {}
 // 3: (y, a) - CSE.functions.f5(time, x, $cse3) - {}
 // 4: $cse3 - CSE.functions.f6(time, x) - {}
-// 5: r.r1 - CSE.functions.f6_eval4(time, time) - {}
+// 5: $cse4 - CSE.functions.f6(time, time) - {}
+//
+// ########### Updated Variable List (simulation) ########### (11)
+// ========================================
+// 1: b[2]:VARIABLE()  type: Real  [2]
+// 2: b[1]:VARIABLE()  type: Real  [2]
+// 3: a[2]:VARIABLE()  type: Real  [2]
+// 4: a[1]:VARIABLE()  type: Real  [2]
+// 5: z:VARIABLE()  type: Real 
+// 6: y:VARIABLE()  type: Real 
+// 7: x:VARIABLE()  type: Real 
+// 8: $cse4.r1:VARIABLE()  type: Real  unreplaceable
+// 9: $cse3.r1:VARIABLE()  type: Real  unreplaceable
+// 10: $cse2:VARIABLE()  type: Real  unreplaceable
+// 11: $cse1:VARIABLE()  type: Real  unreplaceable
+//
+//
+// ########### Updated Equation List (simulation) ########### (7, 11)
+// ========================================
+// 1/1 (3): (z, b) = (y, a)   [dynamic]
+// 2/4 (1): x = $cse1 * $cse4.r1   [dynamic]
+// 3/5 (1): $cse4.r1 = CSE.functions.f6_eval1(time, time)   [unknown]
+// 4/6 (1): $cse3.r1 = CSE.functions.f6_eval3(time, x)   [unknown]
+// 5/7 (3): (y, a) = CSE.functions.f5(time, x, $cse3)   [unknown]
+// 6/10 (1): $cse2 = cos(time)   [unknown]
+// 7/11 (1): $cse1 = sin(time * $cse2)   [unknown]
+//
+// cse replacements (5/53)
+// ========================================
+// 1: $cse4.r1 - CSE.functions.f6_eval1(time, time) - {}
+// 2: $cse3.r1 - CSE.functions.f6_eval3(time, x) - {}
+// 3: (y, a) - CSE.functions.f5(time, x, $cse3) - {}
+// 4: $cse2 - cos(time) - {}
+// 5: $cse1 - sin(time * $cse2) - {}
 // record SimulationResult
 //     resultFile = "CSE.FunctionCallTest7_res.mat",
 //     simulationOptions = "startTime = 0.0, stopTime = 1.0, numberOfIntervals = 500, tolerance = 1e-06, method = 'dassl', fileNamePrefix = 'CSE.FunctionCallTest7', options = '', outputFormat = 'mat', variableFilter = '.*', cflags = '', simflags = ''",
